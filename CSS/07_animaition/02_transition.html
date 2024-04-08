@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 20px;
+    }
+
+    div#a {
+      transition: 1s;
+    }
+
+    div#a:hover {
+      width: 300px;
+    }
+
+    div#b {
+      transition: width 2s, height 4s, background-color 5s;
+    }
+
+    div#b:hover {
+      width: 300px;
+      height: 300px;
+      background-color: blue;
+    }
+
+    div#c {
+      transition: width 2s, height 4s ease-in-out, background-color 5s,
+        transform 2s;
+      transition-delay: 1s;
+      color: white;
+      text-align: center;
+    }
+
+    div#c:hover {
+      width: 300px;
+      height: 300px;
+      background-color: gold;
+      transform: rotate(720deg);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>transition</h1>
+  <div id="a"></div>
+  <div id="b"></div>
+  <div id="c">dizzy</div>
+</body>
+
+</html>

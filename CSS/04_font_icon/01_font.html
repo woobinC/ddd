@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- vuewport: 반응형 웹페이지를 위해 선언하는 태그 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{font-size: 15px;}
+    /* em: 부모의 기본 폰트 사이즈의 배수 */
+    h1{font-size: 4em; font-family: Georgia, 'Times New Roman', Times, serif;}
+    p{font-size: 30px;}
+    p.italic{font-style: italic;}
+    p.oblique{font-style: oblique;}
+    p.small{font-variant: small-caps;}
+    p.bold{font-weight: bold;}
+    p.lighter{font-weight: lighter;}
+
+  </style>
+</head>
+<body>
+  <h1>Today is Monday</h1>
+  <h2><font face="Georgia">Today is drink day</font></h2>
+  <p class="italic">italic</p>
+  <p class="oblique">oblique</p>
+  <p class="small">small</p>
+  <p class="bold">bold</p>
+  <p class="lighter">lighter</p>
+  <hr>
+
+  <h1>가변 폰트</h1>
+  <p>viewport는 브라우저 윈도우 크기. <br>
+     1vw는 viewport 넓이의 1%와 같다. 즉 viewport가 50cm라면 1vw 0.5cm이다.</p>
+  <h3 style="font-size: 5vw;">Responsive Text by Window Width</h3>
+  <h3 style="font-size: 5vh;">Responsive Text by Window Height</h3>
+  <h3 style="font-size: 5vmin;">Responsive Text by Window MinSize</h3>
+  <h3 style="font-size: 5vmax;">Responsive Text by Window MaxSize</h3>
+  
+
+</body>
+</html>

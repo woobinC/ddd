@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{box-sizing: border-box;}
+    body{
+      margin: 0;
+    }
+
+    .header{
+      text-align: center;
+      padding: 32px;
+      background-color: darkslategray;
+      color: aliceblue;
+    }
+    
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+
+    .column{
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column > img{
+      border: 1px solid black;
+      margin-top: 8px;
+      vertical-align: middle;
+    }
+    /*media query: viewport 넓이에 따라 적용되는 css */
+
+    @media only screen and (max-width: 767px) {
+      .column{
+        flex: 50%; max-width: 50%;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      .column{
+        flex: 100%; max-width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <div class="header">
+    <h1>반응형 이미지 갤러리</h1>
+    <p>브라우저 창 크기를 조절해 보세요</p>
+  </div>
+  <!-- photo gallery -->
+  <div class="row">
+    <div class="column">
+      <img src="/images/w3images/falls2.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/img_chania.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/img_flower.jpg" alt="" style="width: 100%;">
+      <img src="/images/queen.jfif" alt="" style="width: 100%;">
+      <img src="/images/queen2.jfif" alt="" style="width: 100%;">
+      <img src="/images/w3images/nature.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/mountainskies.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/rocks.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/ocean.jpg" alt="" style="width: 100%;">
+    </div>
+    <div class="column">
+      <img src="/images/w3images/rocks.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/ocean.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/img_chania.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/nature.jpg" alt="" style="width: 100%;">
+      <img src="/images/queen.jfif" alt="" style="width: 100%;">
+      <img src="/images/w3images/falls2.jpg" alt="" style="width: 100%;">
+      <img src="/images/queen2.jfif" alt="" style="width: 100%;">
+      <img src="/images/w3images/mountainskies.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/img_flower.jpg" alt="" style="width: 100%;">
+    </div>
+    <div class="column">
+      <img src="/images/w3images/mountainskies.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/falls2.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/img_chania.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/rocks.jpg" alt="" style="width: 100%;">
+      <img src="/images/queen.jfif" alt="" style="width: 100%;">
+      <img src="/images/w3images/img_flower.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/nature.jpg" alt="" style="width: 100%;">
+      <img src="/images/queen2.jfif" alt="" style="width: 100%;">
+      <img src="/images/w3images/ocean.jpg" alt="" style="width: 100%;">
+    </div>
+    <div class="column">
+      <img src="/images/w3images/img_chania.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/mountainskies.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/ocean.jpg" alt="" style="width: 100%;">
+      <img src="/images/queen.jfif" alt="" style="width: 100%;">
+      <img src="/images/queen2.jfif" alt="" style="width: 100%;">
+      <img src="/images/w3images/nature.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/img_flower.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/rocks.jpg" alt="" style="width: 100%;">
+      <img src="/images/w3images/falls2.jpg" alt="" style="width: 100%;">
+    </div>
+  </div>
+</body>
+</html>

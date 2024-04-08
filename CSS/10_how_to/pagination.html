@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .pagenation {
+      display: inline-block;
+    }
+
+    .pagenation a {
+      padding: 8px 16px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .pagenation .active {
+      background-color: green;
+      color: white;
+    }
+
+    a:hover:not(.active){
+      background-color: #bbb;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>pagenation</h2>
+  <div class="pagenation">
+    <a href="">&laquo;</a>
+    <a href="" class="active">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+    <a href="">4</a>
+    <a href="">&raquo;</a>
+  </div>
+</body>
+
+</html>

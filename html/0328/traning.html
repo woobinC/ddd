@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table,
+    td {
+      border-collapse: collapse;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    table {
+      width: 200px;
+    }
+
+    .container {
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    header,
+    footer {
+      padding: 1em;
+      color: white;
+      background-color: Green;
+      clear: left;
+      text-align: center;
+    }
+
+    nav {
+      float: left;
+      max-width: 160px;
+      margin: 0;
+      padding: 1em;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: block;
+      background-color: black;
+      margin: 1px;
+      padding: 5px;
+      width: 100px;
+      text-align: center;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: aliceblue;
+    }
+
+    nav ul li:hover {
+      background-color: grey;
+    }
+
+    article {
+      border-left: 1px solid grey;
+      padding: 1em;
+      overflow: auto;
+      display: inline-block;
+      width: 350px;
+      height: 350px;
+    }
+
+    div.a,
+    iframe {
+      display: inline-block;
+      padding: 1em;
+      overflow: auto;
+    }
+
+    div.b {
+      display: inline-block;
+      padding: 1em;
+      overflow: auto;
+      height: 350px;
+      padding: 1em;
+      width: 350px;
+    }
+
+    p,
+    form {
+      text-align: center;
+    }
+
+    td,
+    table {
+      border: none;
+    }
+
+    table {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>NAVER</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="https://mail.naver.com/">메일</a></li>
+        <li><a href="https://cafe.naver.com/">카페</a></li>
+        <li><a href="https://comic.naver.com/">웹툰</a></li>
+        <li><a href="https://news.naver.com/">뉴스</a></li>
+        <li><a href="https://map.naver.com/">지도</a></li>
+        <li><a href="https://blog.naver.com/">블로그</a></li>
+        <li><a href="https://shopping.naver.com/home">쇼핑</a></li>
+        <li><a href="https://finance.naver.com/">증권</a></li>
+        <li><a href="https://land.naver.com/">부동산</a></li>
+        <li><a href="https://chzzk.naver.com/">치지직</a></li>
+      </ul>
+    </nav>
+    <article>
+      <form action="https://search.naver.com/search.naver" mathod="get">
+        <label for="search">검색창: </label>
+        <input type="search" name="query" id="search">
+        <input type="submit">
+      </form>
+      <br>
+      <table>
+        <caption>실시간 검색어 순위</caption>
+        <tr>
+          <td>
+            <ol>
+              <li><a
+                  href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%B2%9C%EC%9A%B0%EB%B9%88">천우빈</a>
+              </li>
+              <li><a
+                  href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EC%9D%B4%EC%84%B1%ED%98%B8&oquery=%EC%B2%9C%EC%9A%B0%EB%B9%88&tqi=ilRm3lqVOsCss7Ld4Jhssssss68-324655">이성호</a>
+              </li>
+              <li><a
+                  href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=html&oquery=%EC%9D%B4%EC%84%B1%ED%98%B8&tqi=ilRmHlqVOZCss5XsKJwssssst%2Fo-232621">Html</a>
+              </li>
+              <li><a
+                  href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=css&oquery=html&tqi=ilRm9dqVOZCss5EgdmCssssstl0-213434">CSS</a>
+              </li>
+              <li><a
+                  href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=java-script&oquery=css&tqi=ilRm%2BlpzL8VssnsyaA0ssssst3h-284361">Java-Script</a>
+              </li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </article>
+    <div class="a">
+      <iframe height="350px" width="900px" src="캡처.PNG" title="YouTube video player" frameborder="0">
+      </iframe>
+    </div>
+    <div class="b">
+      <p>로그인</p>
+      <form action="">
+        <table>
+          <tr>
+            <td>
+              <label for="id">아이디 : </label>
+              <input type="text" name="id" id="id">
+            </td>
+            <td rowspan="2">
+              <input type="submit" value="로그인">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">비밀번호 : </label>
+              <input type="password" name="password" id="password" required>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <footer>Copyright &copy; http://www.naver.com</footer>
+  </div>
+
+</body>
+
+</html>

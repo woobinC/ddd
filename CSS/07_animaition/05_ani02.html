@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div#no_fill {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: ani;
+      animation-duration: 4s;
+      margin-bottom: 10px;
+    }
+
+    div#fill {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: ani;
+      animation-duration: 4s;
+      /* 끝나는 모양 정하는 코드 */
+      animation-fill-mode: forwards
+    }
+
+    @keyframes ani {
+      from{background-color: red;}
+      to{background-color: yellow;}
+    }
+  </style>
+</head>
+
+<body>
+  <h1>만화를 그려보세</h1>
+  <div id="no_fill"></div>
+  <div id="fill"></div>
+  <p>animation fill mode는 종료시 마지막 키프레임 유지</p>
+</body>
+
+</html>

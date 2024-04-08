@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      text-align: center;
+      padding: 30px;
+      height: 100px;
+      width: 200px;
+      background-color: aquamarine;
+      margin: 5px;
+    }
+    .a{
+      background-color: tomato;
+      float: left;
+    }
+    .b{
+      background-color: skyblue;
+      float: left;
+    }
+    .c{
+      background-color: hotpink;
+      float: left;
+    }
+    .d{
+      background-color: teal;
+      float: right;
+    }
+    hr{
+      clear: both;
+    }
+    .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  .img2{float: left;}
+  .clearfix::after{
+    content:"";
+    clear: both;
+    display: table;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>float &amp; clear</h1>
+  <div>float none</div>
+  <div class="a">float left</div>
+  <div class="b">float left</div>
+  <div class="c">float left</div>
+  <div class="d">float right</div>
+  <hr>
+  <div class="e">float noth - float none</div>
+  <div class="clearfix">
+    <img class="img2" src="/images/0.jpg" alt="Pineapple" width="170" height="170">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+  </div>
+  <div class="f">float none</div>
+</body>
+
+</html>

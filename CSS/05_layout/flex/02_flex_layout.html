@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 기본 베이스 */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "맑은 고딕", sans-serif;
+      margin: 0;
+    }
+
+    /* header */
+    .header {
+      padding: 40px;
+      text-align: center;
+      background-color: teal;
+      color: white;
+    }
+
+    /* navigation bar */
+    .nav {
+      display: flex;
+      background-color: #333;
+      /* justify-content: center; */
+    }
+
+    .nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      background-color: pink;
+      color: black;
+    }
+
+    /* row - content */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* side - left column */
+    .side {
+      flex: 30%;
+      background-color: #d1d1d1;
+      padding: 20px;
+    }
+
+    /* main - right column */
+    .main {
+      flex: 70%;
+      background-color: bisque;
+      padding: 20px;
+    }
+
+    /* footer */
+    .footer {
+      text-align: center;
+      background-color: #222;
+      color: white;
+      padding: 20px;
+    }
+    /* Photo */
+    .myPhoto{
+      height: 60px;
+      text-align: center;
+      background-color: #eee;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- note -->
+  <div style="text-align: center; background-color: burlywood; padding: 5px;">
+    <h4>반응형 효과를 체험할 수 있는 플렉스 레이아웃: 창 크기를 조절해 보세요.</h4>
+  </div>
+  <!-- header -->
+  <div class="header">
+    <h1>My Website</h1>
+    <p>with a <b>flexibel</b> layout</p>
+  </div>
+  <!-- Navigation Bar -->
+  <div class="nav">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+  </div>
+  <!-- contentes row -->
+  <div class="row">
+    <!-- side box -->
+    <div class="side">
+      <h2>About Me:</h2>
+      <h6>Photo of me:</h6>
+      <div class="myPhoto" style="height: 120px;">My Photo</div>
+      <p>나란? 제일 잘 나가는 사람</p>
+      <h3>나의 최근 방문지</h3>
+      <p>so cool, So nice!!!</p>
+      <div class="myPhoto">Place 1</div>
+      <div class="myPhoto">Place 2</div>
+      <div class="myPhoto">Place 3</div>
+    </div>
+    <!-- main box -->
+    <div class="main">
+      <h2>오늘의 대한민국</h2>
+      <h5>Lorem ipsum dolor sit amet</h5>
+      <div class="myPhoto" style="height: 300px;">Lorem upsum dolor sit amet</div>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, rerum. Doloremque voluptas eligendi voluptatum
+        dolor temporibus neque reiciendis similique vero dolore officiis. Voluptates laborum natus totam sint sequi sed
+        voluptatem.</p>
+    </div>
+  </div>
+  <!-- footer box -->
+  <div class="footer">
+    <h2>오늘을 살아가는 영웅 그리고 나...</h2>
+  </div>
+</body>
+
+</html>

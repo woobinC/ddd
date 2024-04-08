@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul li{
+      border: 1px solid #ddd;
+      width: 100px; padding: 5px; margin: 3px;
+      text-align: center;
+    }
+    ul.block > li{
+      display: inline-block;
+    }
+    ul.block li:hover{
+      background-color: tomato;
+    }
+    ul.inline{list-style-type: none;
+    display: inline;}
+    /* display: none은 자리까지 없앤다 */
+    #a{display: none;}
+    /* visibility는 hidden이어도 자리를 남긴다 */
+    #b{visibility: hidden;}
+  </style>
+</head>
+<body>
+  <h3>block level elements &amp; inline-elements</h3>
+  <p>block tags</p>
+  <ul class="block">
+    <li>h1~h6</li>
+    <li>div</li>
+    <li>p</li>
+    <li id="a">form</li>
+    <li>header</li>
+    <li id="b">section</li>
+    <li>li</li>
+</ul>
+<hr>
+<p>inline tags</p>
+<ul class="inline">
+    <li>a</li>
+    <li>img</li>
+    <li>span</li>
+    <li>input 등 form 요소들</li>
+    
+</ul>
+</body>
+</html>

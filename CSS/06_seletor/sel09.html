@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style-type: none;
+    }
+
+    #violet {
+      background-color: violet;
+    }
+
+    .skyblue {
+      background-color: skyblue;
+    }
+
+    li {
+      padding: 20px;
+      background-color: pink;
+      margin-bottom: 5px;
+    }
+
+    p {
+      padding: 20px;
+    }
+
+    /* 11점(p + .skyblue) */
+    p.skyblue {
+      background-color: coral;
+    }
+
+    div {
+      padding: 20px;
+      background-color: dodgerblue;
+    }
+    /* !important가 무조건 제일우선 */
+    .yellow{
+      background-color: yellow !important;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Select 우선 순위</h1>
+  <p>같은 점수라면 external -> intenal -> inline 순으로 적용됨. 같은 점수에 같은 위치에 있을 경우 순서가 아래인 것이 최종 적용</p>
+  <ul>
+    <li>element name: 1 point</li>
+    <li class="skyblue">class, attribute, pseudo-class: 10 points</li>
+    <li class="skyblue" id="violet">id: 100points</li>
+    <li class="skyblue" id="violet">inline style: 1000 points</li>
+    <li class="sky" id="violet" style="background-color: sienna">!important: The King!</li>
+  </ul>
+  <p class="skyblue">난 몇 점일까?</p>
+  <div class="yellow" id="green" style="background-color: teal">I am a green DIV</div>
+</body>
+
+</html>

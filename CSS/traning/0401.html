@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{margin: 0;}
+    div.head{text-align: right; margin-bottom: 100px;}
+    div.body{text-align: center;}
+    div.search{text-align: center; margin: 30px;}
+    input.aa{width: 500px; height: 35px; border-radius: 15px ;}
+    input.bb{width: 50px; height: 50px; border-radius: 50%; background-color: skyblue ;}
+    div.a{text-align: center;}
+    a{
+      color: black; text-decoration: none;
+      font-size: 14px;
+    }
+
+    input::placeholder{
+      padding-left: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <head>
+    <div class="head">
+      <img src="캡처.PNG" alt="">
+    </div>
+  </head>
+  <section>
+    <div class="body">
+      <img src="../../images/google.png" alt="">
+    </div>
+    <div class="search">
+      <form action="https://www.google.com/search" method="get">
+        <input class="aa" type="search" name="q" id="search" placeholder="Google 검색 또는 URL 입력">
+        <input class="bb" type="submit" value="검색">
+      </form>
+    </div>
+    <div class="a">
+      <div>
+        <img src="네이버.PNG" alt="http://www.naver.com" usemap="#naver">&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="네이버카페.PNG" alt="https://cafe.naver.com/jmk255" usemap="#cafe">&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="유튜브.PNG" alt="https://www.youtube.com/" usemap="#youtube">&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="바로가기추가.PNG" alt="">
+      </div>
+      <div>&nbsp;&nbsp;
+        <a href="#">NAVER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">네이버카페</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">YouTube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">바로가기 추가</a>
+        <map name="naver">
+          <area shape="circle" coords="37, 37, 25" href="http://www.naver.com" title="naver">
+        </map>
+        <map name="cafe">
+          <area shape="circle" coords="37, 37, 25" href="http://www.naver.com/" title="cafe">
+        </map>
+        <map name="youtube">
+          <area shape="circle" coords="37, 37, 25" href="http://www.youtube.com/" title="youtube">
+        </map>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* h2{
+      background-color: tomato; padding:10px; color:white;
+    } */
+    .city{
+      background-color: black; padding:10px; color:white;
+    }
+    p{
+      background-color: cadetblue;
+    }
+    .asia{
+      color:blue;
+    }
+
+    #sun{
+      background-color: gold; color:red;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Class &amp; ID</h1>
+  <ul>
+    <li>class: 페이지 내에서 특정 element들을 한 번에 선택하기 위한 속성. 띄어쓰기로 한 element에 여러 class 설정 가능</li>
+    <li>id: 페이지 내에서 유일한 특정 element를 선택하기 위한 속성</li>
+  </ul>
+
+  <h2 class="city">London</h2>
+  <p>London은 영국의 수도이다.</p>
+  <h2 class="city">Paris</h2>
+  <p>Paris은 프랑스의 수도이다.</p>
+  <h2 class="city">Berlin</h2>
+  <p>Berlin은 독일의 수도이다.</p>
+  <h2 class="city asia">Seoul</h2>
+  <p>Seoul은 대한민국의 수도이다.</p>
+  <h2 id="sun">Sun</h2>
+  <p>Sun은 태양계의 중심이다.</p>
+
+  <button type="button" onclick="erase()">태양을 피하고 싶어서</button>
+  <button type="button" onclick="appear()">태양을 보고 싶어서</button>
+
+  <script>
+    var x = document.getElaementById("sun");
+    function erase(){x.style.display="none"}
+    function appear(){x.style.display="block"}
+  </script>
+</body>
+</html>

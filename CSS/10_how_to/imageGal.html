@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 200px;
+    }
+
+    .child {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    div.gal {
+      margin: 5px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+
+    div.desc{
+      padding: 15px;
+      text-align: center;
+    }
+
+    div.gal:hover{
+      border: 1px solid #777;
+    }
+
+    .child:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <h1>우리 반 아이들</h1>
+
+  <div class="child">
+    <div class="gal">
+      <a href="/images/2010.jpg" target="gal_home">
+        <img src="/images/2010.jpg" alt="">
+      </a>
+      <div class="desc">예쁜 앞집 아이</div>
+    </div>
+    <div class="gal">
+      <a href="/images/2011.jpg" target="gal_home">
+        <img src="/images/2011.jpg" alt="">
+      </a>
+      <div class="desc">예쁜 옆집 아이</div>
+    </div>
+    <div class="gal">
+      <a href="/images/2013.jpg" target="gal_home">
+        <img src="/images/2013.jpg" alt="">
+      </a>
+      <div class="desc">예쁜 뒷집 아이</div>
+    </div>
+  </div>
+
+  <iframe src="" frameborder="0" name="gal_home" width="400px" height="350px"></iframe>
+</body>
+
+</html>

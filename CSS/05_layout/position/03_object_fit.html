@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      margin-left: 3px; float: left;
+    }
+    img{width: 200px; height: 400px; border: 3px solid black;}
+    p{
+    width: 200px; padding: 5px 0; text-align: center; border: 3px solid black;
+    margin-bottom: 0; background-color: blanchedalmond;
+    }
+    .contain{object-fit: contain;}
+    .cover{object-fit: cover;}
+    .fill{object-fit: fill;}
+    .scale-down{object-fit: scale-down;}
+  </style>
+</head>
+<body>
+  <h2>Object Fit</h2>
+
+  <div>
+    <p>default 200x400</p>
+    <img src="/images/unit_Drink.jpg" alt="wine">
+  </div>
+  <div>
+    <p>default 200x400</p>
+    <img class="contain" src="/images/unit_Drink.jpg" alt="wine">
+  </div>
+  <div>
+    <p>default 200x400</p>
+    <img class="cover" src="/images/unit_Drink.jpg" alt="wine">
+  </div>
+  <div>
+    <p>default 200x400</p>
+    <img class="fill" src="/images/unit_Drink.jpg" alt="wine">
+  </div>
+  <div>
+    <p>default 200x400</p>
+    <img class="scale-down" src="/images/unit_Drink.jpg" alt="wine">
+  </div>
+
+</body>
+</html>

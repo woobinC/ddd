@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{margin-bottom: 20px; height: 100px;}
+    div#linear{background:linear-gradient(skyblue, blue)}
+    div#toRight{background:linear-gradient(to Right, pink, red)}
+    div#multi{background:linear-gradient(white, pink, orange, red, skyblue, blue)}
+    div#angle{background:linear-gradient(150deg, white, pink, orange, red, skyblue, blue)}
+    div#rainbow{background:linear-gradient(to right, red, orange, yellow, green, blue, navy, violet)}
+    div#circle{background:radial-gradient(red, orange, yellow, green, blue, navy, violet)}
+    div#shape{background:radial-gradient(circle, red, orange, yellow, green, blue, navy, violet)}
+    div#trans{background:linear-gradient(to right, rgba(255,0,0,0.1), rgba(255,0,0,1));}
+    div#photo{background-image: radial-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.9)),url(../../images/unit_Special.jpg); height: 400px; background-size: cover;}
+
+  </style>
+</head>
+<body>
+  <h1>Gradient Color</h1>
+    <div id="linear"></div>
+    <div id="toRight"></div>
+    <div id="multi"></div>
+    <div id="angle"></div>
+    <div id="rainbow"></div>
+    <div id="circle"></div>
+    <div id="shape"></div>
+    <div id="trans"></div>
+    <div id="photo"></div>
+</body>
+</html>

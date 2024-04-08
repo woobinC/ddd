@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header {
+      background-color: skyblue;
+      padding: 2em;
+    }
+
+    nav {
+      background-color: black;
+      color: white;
+      padding: 15px;
+    }
+
+    section {
+      background-color: antiquewhite;
+      float: left;
+      width: 70%;
+    }
+
+    article.news1 {
+
+      background-color: limegreen;
+
+      padding: 5em;
+      margin: 5px;
+    }
+
+    article.news2 {
+      background-color: palevioletred;
+      padding: 5em;
+      margin: 5px;
+    }
+
+
+    aside {
+      background-color: cadetblue;
+      padding: 15em 5px;
+
+    }
+
+    footer {
+      background-color: brown;
+      color: white;
+      text-align: center;
+      padding: 2em;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>HTML5 New Tags - Semantin(의미론: 역할에 맞는 뜻의 태그사용)</h1>
+  <hr>
+
+  <div class="wrap">
+    <div class="header">header</div>
+    <div class="nav">nav</div>
+    <div class="content">content
+      <div class="section">section</div>
+      <div class="article">article</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+  <hr>
+  <div class="wrap">
+    <header>
+      <h1>헤더 영억</h1>
+    </header>
+    <nav>네비게이션 영역</nav>
+    <section>
+      컨텐츠 영역
+      <article class="news1">뉴스1: 실제 컨텐츠</article>
+      <article class="news2">뉴스2: 실제 컨텐츠</article>
+
+      <figure>
+        <figcaption>미디어 캡션</figcaption>
+        <video src="../../images/media/SANY0103.MP4">비디오</video>
+        <legend>캡션</legend>
+      </figure>
+      <aside>참조 영역</aside>
+      <footer>서비스 제공자 info 영역</footer>
+    </section>
+  </div>
+
+</body>
+
+</html>

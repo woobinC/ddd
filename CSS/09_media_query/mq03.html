@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap {
+      height: 400px;
+      overflow: auto;
+    }
+
+    #main {
+      margin-left: 4px;
+    }
+
+    #left {
+      float: none;
+      width: auto;
+    }
+
+    .item {
+      margin: 4px;
+      padding: 2px;
+      list-style-type: none;
+      border: 1px solid #d4d4d4;
+      border-radius: 4px;
+      background-color: #cdf0f0;
+    }
+
+    @media (min-width: 500px){
+      #left{width:200px; float: left; margin-top: 100px;}
+      #main{margin-left: 220px;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div id="left">
+      <ul id="menu">
+        <li class="item">item1</li>
+        <li class="item">item2</li>
+        <li class="item">item3</li>
+        <li class="item">item4</li>
+        <li class="item">item5</li>
+      </ul>
+    </div>
+    <div id="main">
+      <h1>우리 모두가 사랑하는 미디어 쿼리</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.</p>
+    </div>
+  </div>
+</body>
+
+</html>

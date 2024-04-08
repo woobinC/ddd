@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{margin:0;}
+    div{
+      background-color: rgba(233, 100, 128, 0.5); height: 100px;
+      margin-bottom: 5px;
+    }
+    div.a{width:50%; overflow: hidden;}
+    div.b{width:300px; }
+    div.c{width:50%; max-width: 500px;}
+    div.d{width:50%; max-width: 500px; height: 400px; min-height: 50px;}
+
+  </style>
+</head>
+<body>
+  <h2>width &amp; height</h2>
+  <head>
+    <div>width: 100% - 가변 너비, height: 100px - 고정 높이</div>
+    <div class="a">width: 50% - 가변 너비 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, rerum. Doloremque voluptas eligendi voluptatum dolor temporibus neque reiciendis similique vero dolore officiis. Voluptates laborum natus totam sint sequi sed voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur suscipit rerum laudantium numquam amet. Necessitatibus nemo earum veniam blanditiis minus vel exercitationem impedit dolore rerum ipsum. Odio voluptatum harum sint?</div>
+    <div class="b">width: 300px - 고정 너비</div>
+    <div class="c">width: 50%; max-width; - 가변 너비, 최대 넓이 지정</div>
+    <div class="d">max-width: 500px; min-height: 50px;</div>
+  </head>
+</body>
+</html>

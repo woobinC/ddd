@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      position: absolute;
+    }
+
+    #container div {
+      background-color: lightblue;
+      border: 1px solid #999;
+      width: 100px;
+      height: 100px;
+      opacity: 0.5;
+    }
+
+    div#myBox {
+      opacity: 1;
+      background-color: tomato;
+      z-index: 1;
+      animation: mave 5s infinite linear;
+    }
+
+    @keyframes move {
+      50% {
+        z-index: 5;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Animation of z-index</h1>
+
+  <div id="container">
+    <div id="myBox">MyBox</div>
+    <div style="top:20px; left:20px; z-index: 1">z-index 1</div>
+    <div style="top:40px; left:40px; z-index: 2">z-index 2</div>
+    <div style="top:60px; left:60px; z-index: 3">z-index 3</div>
+    <div style="top:80px; left:80px; z-index: 4">z-index 4</div>
+  </div>
+</body>
+
+</html>

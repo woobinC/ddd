@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form_elements</title>
+</head>
+
+<body>
+    <h3>My Car</h3>
+    
+        <form action="">
+         <fieldset>
+        <legend>My Car</legend>
+            <select name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="benz">Benz</option>
+            <option value="audi">Audi</option>
+        </select><br><br>
+
+            <textarea name="message" style="width:200px; height:300px">주문서: </textarea><br><br>
+            <button type="button" onclick="alert('hello world!')">Click me!!</button><br><br><br>
+            <fieldset>
+                <legend>My old car</legend>
+                <label for="m1">porsche</label>
+                <input type="checkbox" name="car" id="m1" value="porsche"/><br>
+                <label for="m2">bmw</label>
+                <input type="checkbox" name="car" id="m2" value=""/><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>My new car</legend>
+                <label for="n1">Lambourgini</label><input type="radio" name="myNewCar" id="n1" value="Lambourgini"/>
+                <label for="n2">Ferrari</label><input type="radio" name="myNewCar" id="n2" value="Ferrari" />
+            </fieldset>
+            <br>
+            <input type="submit" value="보내기" />
+            <input type="reset" value="작성 취소" />
+            </fieldset>
+        </form>
+    
+</body>
+</html> 

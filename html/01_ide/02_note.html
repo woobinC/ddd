@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<style>
+			h1{ color : blue; }
+			li{ transition : all 0.5s; }
+			li:hover{ font-size : 30px; color : green;}
+		</style>
+	</head>
+	<body>
+		<div id="sejong">
+			<h1> This is Codepen.io </h1>
+			<ul id="lists">
+				<li>computer Engineering</li>
+				<li>Web Programing</li>
+			</ul>
+		</div>
+		<script>
+			const li = lists.getElementsByTagName('li');
+			for(let i=0; i<li.length; i++){
+			li[i].addEventListener('click', (e)=>{
+			alert('click');
+			});
+			}
+		</script>
+	</body>
+</html>

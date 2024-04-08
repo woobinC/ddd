@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn {
+      border: 2px solid black;
+      color: black;
+      padding: 14px;
+      width: 100px;
+      font-size: 16px;
+      display: inline-block;
+      text-align: center;
+      background-color: white;
+      border-radius: 7px;
+    }
+
+    .success {
+      border-color: #4caf50;
+      color: green;
+    }
+
+    .success:hover {
+      background-color: #4caf50;
+      color: white
+    }
+
+    .success:hover~.success_panel {
+      display: block;
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .info:hover~.info_panel {
+      display: block;
+      background-color: #2196f3;
+      color: white
+    }
+
+    .warning:hover~.warning_panel {
+      display: block;
+      background-color: #ff9800;
+      color: white;
+    }
+
+    .danger:hover~.danger_panel {
+      display: block;
+      background-color: #f44336;
+      color: white;
+    }
+
+    .default:hover~.default_panel {
+      display: block;
+      background-color: #e7e7e7;
+      color: black;
+    }
+
+    .info {
+      border-color: #2196f3;
+      color: dodgerblue
+    }
+
+    .info:hover {
+      background-color: #2196f3;
+      color: white
+    }
+
+    .warning {
+      border-color: #ff9800;
+      color: orange;
+    }
+
+    .warning:hover {
+      background-color: #ff9800;
+      color: white;
+    }
+
+    .danger {
+      border-color: #f44336;
+      color: red
+    }
+
+    .danger:hover {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .default {
+      border-color: #e7e7e7;
+      color: black;
+    }
+
+    .default:hover {
+      background-color: #e7e7e7;
+      color: black;
+    }
+
+    p {
+      width: 80%;
+      background-color: #4caf50;
+      color: white;
+      font-size: 50px;
+      text-align: center;
+      margin: auto;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Outline Buttons</h1>
+
+  <button class="btn success">Success</button>
+  <button class="btn info">Info</button>
+  <button class="btn warning">Warning</button>
+  <button class="btn danger">Danger</button>
+  <button class="btn default">Default</button>
+  <hr>
+  <p class="success_panel">성공!!!</p>
+  <p class="info_panel">정보!!!</p>
+  <p class="warning_panel">경고!!!</p>
+  <p class="danger_panel">위험!!!</p>
+  <p class="default_panel">즐거운 오후!!!</p>
+</body>
+
+</html>

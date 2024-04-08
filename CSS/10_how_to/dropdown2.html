@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    li a {
+      color: white;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover,
+    .dd:hover .dd_btn {
+      background-color: red;
+    }
+
+    .dd_content {
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      display: none;
+    }
+
+    .dd_content a {
+      color: black;
+      text-align: left;
+    }
+
+    .dd_content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dd:hover .dd_content{ 
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Dropdown Menu Bar</h1>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li class="dd">
+      <a href="javascript:void(0)" class="dd_btn">Lunch Menu</a>
+      <div class="dd_content">
+        <a href="#">전복죽</a>
+        <a href="#">야채죽</a>
+        <a href="#">소고기죽</a>
+      </div>
+    </li>
+    <li class="right"><a href="#about">About</a></li>
+  </ul>
+  <div class="next"></div>
+</body>
+
+</html>

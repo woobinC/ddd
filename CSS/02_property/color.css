@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/*기본색상*/
+:root{
+    --main-color:#5D9AB2;
+    --accect-color:#BF6A7A;
+    --dark-main-color:#2B5566;
+    --title-font-color:#fff;
+}
+
+
+h3{
+    background-color: var(--dark-main-color); color: var(--title-font-color);
+}
+ol{
+    color: var(--title-font-color);
+}
+li{
+    background-color: var(--accect-color); padding: 5px; margin: 12px;
+}

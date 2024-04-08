@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- External Style Sheet -->
+  <link rel="stylesheet" href="external.css">
+  <!-- Internal Style Sheet -->
+  <style>
+    h2{
+      padding: 20px; background-color: lightcoral;
+      color:blue;
+    }
+    h2{
+      color:darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <h2>How To Use CSS?</h2>
+
+  <p>css를 사용하는 방법은 다음의 3가지가 있습니다.</p>
+
+  <ul>
+    <!-- head에 link:css -->
+    <li>External Style Sheet: 가장 먼저 적용</li>
+    <!-- head에 style로 직접 입력 -->
+    <li>Internal Style Sheet: External 과 같은 요소에 적용될 경우 우선 순위가 높다</li>
+    <!-- body에 style로 입력 -->
+    <li>Inline Style: 우선 순위가 가장 높다</li>
+  </ul>
+
+  <h2 style="color:black;">inline style: 가장 마지막에 적용되니까 제일 세다고 봐야지</h2>
+</body>
+</html>

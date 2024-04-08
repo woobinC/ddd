@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>output: form에서 벌어지는 연산의 결과롤 출력하기 위한 태그</h1>
+
+  <p>form의 event로 값을 입력할 때마다 계산값 즉시 반영</p>
+
+  <form action="" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    0
+    <input type="range" name="a" value="50">
+    100 +
+    <input type="number" name="b" value="50">
+    =
+    <output name="x" for="a b"></output>
+    <br>
+    <input type="submit">
+  </form>
+
+</body>
+</html>

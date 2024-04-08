@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>html5 new tags</h1>
+
+  <ruby>
+    오
+    <rp>(</rp>
+    <rt>주</rt>
+    <rp>)</rp>
+    늘
+    <rp>(</rp>
+    <rt>석</rt>
+    <rp>)</rp>
+  </ruby>
+  <hr>
+
+  <form action="">
+    <progress id="prog" value="0" max="100"></progress>
+    <p></p>
+    <meter id="met" value="0" max="100"></meter>
+    <p></p>
+    <input type="button" value="시작" onclick="move()">
+  </form>
+  <script type="text/javascript">
+    function move() {
+      var prog = document.getElementById("prog");
+      var met = document.getElementById("met");
+      var load = 0;
+      var timer = setInterval(function () {
+        load += 10;
+        prog.value = load;
+        met.value = load;
+        if (load == 100) {
+          clearInterval(timer);
+        }
+      }, 1000);
+    }
+  </script>
+  <hr>
+
+  <embed src="../../images/media/Kalimba.mp3" type="mp3">
+  <hr>
+  <audio controls>
+    <source src="../../images/media/Kalimba.mp3">
+    <source src="../../images/media/Kalimba.ogg">
+    <source src="../../images/media/Kalimba.wav">
+  </audio>
+  <hr>
+
+  <video width="500px" controls>
+    <source src="../../images/media/butterfly_swimming.mp4">
+    <source src="../../images/media/butterfly_swimming.avi">
+    <source src="../../images/media/butterfly_swimming.ogv">
+  </video>
+</body>
+
+</html>

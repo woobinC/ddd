@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table, th, td {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+
+    table {
+      width: 50%;
+      background-color: yellow;
+    }
+
+    th,
+    td {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>rowspan &amp; colspan</h1>
+  <p>표의 cell을 가로 혹은 세로로 확장할 때 사용</p>
+
+  <table>
+    <tr>
+      <th>성</th>
+      <th>이름</th>
+      <th>나이</th>
+    </tr>
+    <tr>
+      <td colspan="3">김유신</td>
+    </tr>
+    </tr>
+    <tr>
+      <td rowspan="2">이</td>
+      <td>준호</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>수림</td>
+      <td>35</td>
+    </tr>
+
+  </table>
+
+</body>
+
+</html>

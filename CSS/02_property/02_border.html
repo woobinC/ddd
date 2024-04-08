@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      border: 2px solid coral; padding:5px;
+    }
+    p{padding:10px; border: 1px solid peru;}
+    p.dotted{border-width: 5px; border-style:dotted; border-color:brown;}
+    p.dashed{border-width: 5px; border-style:dashed; border-color:gold;}
+    p.double{border-width: 5px; border-style:double; border-color:red;}
+    p.groove{border-style: groove; border-width:10px; border-color: aquamarine;}
+    p.ridge{border-style: ridge; border-width: 10px;}
+    p.inset{border-style: inset; border-width: 10px;}
+    p.outset{border-style: outset; border-width: 10px;}
+    p.none{border-style: none; border-width: 10px;}
+    p.hidden{border-style: hidden; border-width: 10px;}
+    p.inherit{border-style: inherit; border-width: 10px;}
+    /* 2개면 (상하 좌우), 3개면 (상 좌우 하),  4개면 (시계방향)*/
+    p.mix{border-style: dotted dashed double solid;
+          border-width: 1px 1px 5px 10px; 
+          border-color: red red red green}
+    p.square{border-style: solid; border-color: red blue;
+            border-width: 5px; width: 0px}
+    p.left_bar{border-left: 5px solid green;}
+    p.bottom{border-bottom: 5px solid green;}
+    p.button{border: 2px solid green; width: 120px; height:20px; border-radius: 10%; text-align: center;}
+    
+  </style>
+</head>
+<body>
+  <h2>border style property</h2>
+
+  <div>
+    <p>하나의 프로퍼티에 여러 값을 한 번에 적용할 수 있다.</p>
+    <p class="dotted">A dotted border</p>
+    <p class="dashed">A dashed border</p>
+    <p class="double">A double border</p>
+    <p class="groove">A groove border</p>
+    <p class="ridge">A ridge border</p> 
+    <p class="inset">A inset border</p>
+    <p class="outset">A outset border</p>
+    <p class="none">none border</p>
+    <p class="hidden">A hidden border</p>
+    <p class="inherit">A inherit border</p>
+    <p class="mix">A mixed border</p>
+    <p class="square"></p>
+    <p class="left_bar">A left_bar border</p>
+    <p class="bottom">A bottom border</p>
+    <p class="button">A botton border</p>
+  </div>
+
+</body>
+</html>

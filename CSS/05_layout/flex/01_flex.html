@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    hr{
+      height: 5px; background-color: black;
+    }
+    .container{
+      background-color: blanchedalmond;
+      margin-bottom: 10px; 
+    }
+    .container > div {
+      background-color: cadetblue;
+      width: 100px; height: 100px;
+      margin: 10px; text-align: center;
+      line-height: 100px;
+      /* flex: 1 */
+    }
+    p{
+      width: 100px; background-color: brown; 
+      color: white; margin: 10px;
+      height: 100px; 
+      /* flex: 2 */
+    }
+    .c1{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex; flex-direction: row;
+    }
+    .c2{
+      display: flex; flex-direction: column;
+    }
+    .c3{
+      display: flex; flex-direction: row-reverse;
+    }
+    .c4{
+      display: flex; flex-direction: column-reverse;
+    }
+    .c5{
+      display: flex; flex-wrap: wrap;
+    }
+    .c6{
+      display: flex; justify-content: center;
+    }
+    .c7{
+      display: flex; justify-content: space-around;
+    }
+    .c8{
+      display: flex; justify-content: space-between;
+    }
+    .c9{
+      height: 300px;
+      display: flex; justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container c1">
+    <p>direction: row</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="container c2">
+    <p>direction: column</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>  
+
+  <div class="container c3">
+    <p>direction: row-reverse</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="container c4">
+    <p>direction: column-reverse</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr>
+
+  <div class="container c5">
+    <p>flex-wrap: wrap</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>3</div>
+    <div>3</div>
+    <div>3</div>
+    <div>3</div>
+    <div>3</div>
+    <div>3</div>
+    <div>3</div>
+  </div>
+
+  <hr>
+
+  <div class="container c6">
+    <p>justify-content: center</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="container c7">
+    <p>justify-content: space-around</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="container c8">
+    <p>justify-content: space-between</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr>
+
+  <div class="container c9">
+    <p>align-items: center</p>
+  </div>
+  
+</body>
+</html>

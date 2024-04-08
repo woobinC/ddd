@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{counter-reset: section}
+        h1{counter-reset: subsection}
+        h1::before{
+            counter-increment: section;
+            content: "Section " counter(section) ": ";
+        }
+        h2::before{
+            background-color: black; color: white;
+            border-radius: 30%; 
+            counter-increment: subsection;
+            content: counter(section)"."counter(subsection)" ";
+        }
+    </style>
+</head>
+<body>
+    <h1>아침밥</h1>
+    <h2>보리밥</h2>
+    <h2>미역국</h2>
+    <h1>점심밥</h1>
+    <h2>갈비탕</h2>
+    <h2>떡갈비</h2>
+    <h1>저녁밥</h1>
+    <h2>도미회</h2>
+    <h2>털게찜</h2>
+</body>
+</html>

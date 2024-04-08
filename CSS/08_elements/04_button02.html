@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <style>
+    .button {
+      width: 200px;
+      padding: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      margin: 5px;
+      border: none;
+      background-color: darkcyan;
+      color: white;
+      text-align: center;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  </style>
+  <style>
+    .split {
+      background-color: #2196f3;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: absolute;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      z-index: 1
+    }
+
+    .dropdown-content a {
+      color: black;
+      text-decoration: none;
+      padding: 12px 16px;
+      display: block
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block
+    }
+
+    .split:hover,
+    dropdown:hover .split {
+      background-color: #0b7dda;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Animated Button</h2>
+  <button class="button"><span>Live</span></button>
+  <button class="button"><span>Die</span></button>
+  <hr>
+  <button class="split">Menu</button>
+  <div class="dropdown">
+    <button class="split" style="border-left: 1px solid white"><i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <a href="#">짜장면</a>
+      <a href="#">짬뽕</a>
+      <a href="#">탕수육</a>
+    </div>
+  </div>
+</body>
+
+</html>

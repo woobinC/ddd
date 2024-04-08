@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      background-color: firebrick;
+      color: aliceblue;
+      padding: 20px;
+    }
+
+    ul {
+      list-style-type: circle;
+      list-style-position: inside;
+    }
+
+    li {
+      padding: 10px;
+      background-color: yellowgreen;
+      margin-bottom: 3px;
+    }
+
+    div p {
+      background-color: bisque;
+    }
+
+    div>p {
+      background-color: blueviolet;
+      color: white;
+    }
+
+    div~p {
+      background-color: brown;
+      color: white;
+    }
+
+    div+p {
+      background-color: teal;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Combinator</h1>
+  <ul>
+    <li>comma(div,p): div 태그와 p 태그 그룹 선택자</li>
+    <li>space(띄어쓰기 div p ): div의 후손 div에 포함된 모든 p</li>
+    <li>꺽쇠(div > p): div의 자식 p</li>
+    <li>div ~ p: div 다음에 나오는 모든 형제 p </li>
+    <li>div + p: div 바로 다음 형제 p</li>
+  </ul>
+
+  <p>Universe</p>
+  <div>
+    <p>Little Prince</p>
+    <div class="earth">
+      <p>Fox</p>
+      <p>Snake</p>
+      <span>
+        <p>Hat</p>
+      </span>
+    </div>
+
+  </div>
+  <p>rose</p>
+  <p>rose</p>
+  <p>rose</p>
+  <p>rose</p>
+  <p>rose</p>
+</body>
+
+</html>

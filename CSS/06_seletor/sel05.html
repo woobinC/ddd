@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li {
+      list-style-type: none;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .toDo li {
+      font-family: "휴먼매직체", sans-serif;
+      font-size: 20px;
+    }
+    .toDo li:first-child {
+      border-top: 1px solid #ddd;
+    }
+    .toDo li:nth-child(3) {
+      background-color: pink;
+    }
+    
+    .toDo li:nth-child(4n) {
+      background-color: yellow;
+    }
+    .toDo li:nth-child(odd) {
+      background-color: peru;
+    }
+    
+    .toDo li:nth-child(even) {
+      background-color: gold;
+    }
+    
+    .toDo li:nth-last-child(2) {
+      background-color: teal;
+    }
+    
+    .toDo li:first-of-type {
+      background-color: tomato;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>오늘의 계획</h3>
+  <ul class="toDo">
+    <li>CSS 공부</li>
+    <li>시 한편 쓰기</li>
+    <li>유튜브 영상 만들기</li>
+    <li>수영</li>
+    <li>자전거 타기</li>
+    <li>데이터 분석하기</li>
+    <li>앱 만들기</li>
+    <li>떼부자 되기</li>
+  </ul>
+</body>
+
+</html>

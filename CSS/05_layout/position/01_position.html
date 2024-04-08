@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      background-color: aquamarine;
+      padding: 10px;
+      list-style-type: none;
+      position: static;
+    }
+
+    li {
+      margin: 5px;
+      background-color: brown;
+      color: white;
+      padding: 3px;
+    }
+
+    .box {
+      width: 200px;
+      height: 50px;
+      border: 1px solid red;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .static {
+      position: static;
+    }
+
+    .relative {
+      position: relative;
+      top: -60px;
+      left: 400px;
+      height: 300px;
+    }
+
+    .absolute {
+      position: absolute;
+      left: 450px;
+      top: 70px;
+    }
+
+    .abs-in-rel {
+      width: 100px;
+      position: absolute;
+      left: 50px;
+      top: 200px;
+    }
+
+    .fixed {
+      position: fixed;
+      width: 50px;
+      right: 50px;
+      bottom: 50px;
+    }
+
+    .sticky {
+      position: sticky;
+      width: 100%;
+      background-color: teal;
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>position</h1>
+  <h3>특정 요소의 위치를 정하는 다섯 가지 방법</h3>
+  <ul>
+    <li>static: 특정 위치 지정 없이 본래 흐름 상의 위치</li>
+    <li>relative: 자신의 본래 위치에 대한 상대의 위치</li>
+    <li>absolute: 가장 가까이 위치한, 특정 위치로 고정된, 블록형 조상에 대한 상대적 위치</li>
+    <li>fixed: viewport에 대한 상대적 위치에 고정</li>
+    <li>sticky: 사용자의 스크롤 위치에 고정</li>
+  </ul>
+
+  <div class="box static">static</div>
+  <div class="box relative">relative
+    <div class="box abs-in-rel">안에 든 상자</div>
+  </div>
+  <div class="box absolute">absolute</div>
+  <div class="box fixed">fixed</div>
+  <div class="box sticky">sticky</div>
+  <div style="background-color: palevioletred; width: 50%; height: 1500px;">Lorem ipsum dolor sit, amet consectetur
+    adipisicing elit. Cum, rerum. Doloremque voluptas eligendi voluptatum dolor temporibus neque reiciendis similique
+    vero dolore officiis. Voluptates laborum natus totam sint sequi sed voluptatem.</div>
+
+</body>
+
+</html>

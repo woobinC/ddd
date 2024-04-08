@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body{
+      margin: 0;
+    }
+    div{
+      width: 1000px;
+    }
+    .fa-youtube {
+      padding: 8px;
+      font-size: 20px;
+      width: 40px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 5px;
+      background: #bb0000;
+      color: white;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      font-size: 14px;
+      background-color: #ffffff;
+      padding: 12px 20px 12px 40px;
+      background-image: url(/images/search.png);
+      background-position: 255px 8px;
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      transition: 0.4s ease-in-out;
+    }
+    form{
+      display: inline-block;
+      margin-left: 40px;
+    }
+    button{
+      margin-top: 15px;
+      border-radius: 8px;
+      border-style: none;
+      cursor: pointer;
+      padding: 5px 10px;
+      font-size: 11px;
+    }
+    button:hover{
+      background-color: #bbb;
+    }
+    nav{
+      text-align: center;
+    }
+    li{
+      margin-left:0 ;
+      list-style-type: none;
+      padding: 10px;
+
+    }
+    hr{
+      width: 150px;
+      margin: 0;
+      border: none;
+      border-top: 2px solid black;
+    }
+    section{
+      display: flex;
+    }
+    .side{
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+    <a href="#" class="fa fa-youtube"></a>
+    <form>
+      <input type="text" name="search" placeholder="Search..">
+    </form>
+  </div>
+  </header>
+  <nav>
+    <button>전체</button>
+    <button>10분 미만</button>
+    <button>게임</button>
+    <button>음악</button>
+    <button>라이브</button>
+    <button>만화 영화</button>
+    <button>액션</button>
+  </nav>
+  <section>
+    <div class="side">
+      <ul>
+        <li>홈</li>
+        <li>shorts</li>
+        <li>구독</li>
+        <hr>
+        <li>내 채널</li>
+        <li>시청 기록</li>
+        <li>재생목록</li>
+        <li>내 동영상</li>
+      </ul>
+    </div>
+    <div class="content">
+      동영상!
+    </div>
+  </section>
+  <footer>
+    유튜브설명
+  </footer>
+</body>
+
+</html>

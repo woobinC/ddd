@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      border: 1px solid red;
+    }
+
+    h2 {
+      background-color: skyblue;
+      border: 1px solid black;
+      margin: 50px;
+    }
+
+    div.ex {
+      margin: 30px 80px;
+      background-color: brown;
+      height: 100px;
+    }
+
+    p {
+      background-color: goldenrod;
+      margin: 50px 100px 30px 10px
+    }
+
+    div.center {
+      background-color: teal;
+      width: 50%;
+      height: 300px;
+      margin: 50px auto;
+    }
+
+    div>p {
+      width: 50%;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>margin</h2>
+
+  <div class="ex">margin: 값이 2개</div>
+
+  <p>margin은 인접한 엘리먼트의 값이 중복 적용되지 않고 큰 쪽이 적용된다. 특정 브라우저에선 중복 적용되기도 한다. <br>
+    값 4개: 위로부터 시계방향으로 적용
+  </p>
+
+  <div class="center">center
+    <p>margin 속성을 이용해 box elements를 그것이 포함된 상자의 횡적인 중앙으로 위치시킬 수 있다. <br>
+      해당 box는 특정 넓이값(width)를 가져야 하면, 나머지 영역을 왼쪽 오른쪽 마진으로 동일한 값이 적용됨
+    </p>
+  </div>
+
+</body>
+
+</html>
