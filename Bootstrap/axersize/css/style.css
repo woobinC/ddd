@@ -1,0 +1,33 @@
+.w3-top{
+  font-size: 12px;
+}
+
+h1 > span{
+  font-size: 28px;
+}
+
+.w3-container > h3{
+  font-size: 18px;
+}
+
+.w3-row-padding{
+  font-size: 12px;
+}
+
+.w3-container > p {
+  font-size: 12px;
+}
+
+input[type="text"]{
+  font-size: 12px;
+  padding: 7px;
+}
+
+.w3-button {
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.w3-center > p {
+  font-size: 12px;
+}
