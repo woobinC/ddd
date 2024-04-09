@@ -1,0 +1,618 @@
+@charset "UTF-8";
+/*기본색상*/
+
+:root {
+  --main-color: #5D9AB2;
+  --accent-color: #BF6A7A;
+  --dark-main-color: #2B5566;
+  --text-bright-color: #fff;
+  --icon-color: #fff;
+  --icon-bk-color: #ddd;
+  --gray-color: #ddd;
+  --large-width: 1000px;
+  --middle-width: 768px;
+}
+
+/*기본 폰트 크기 설정*/
+
+@media (max-width: 599px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) and (max-width:799px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  font-family: '맑은 고딕', 'Appla SD Gothic Neo', sans-serif;
+}
+
+/* header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+/* logo */
+.headA {
+  display: inline-block;
+  line-height: 70px;
+  padding: 0 20px;
+  background-color: var(--main-color);
+  color: var(--text-bright-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* navigation menu */
+.headB ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.headB a {
+  display: block;
+  padding: 15px;
+  color: inherit;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.headB a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.headC {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-right: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.headC:hover {
+  opacity: 0.3;
+}
+
+header .container-small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headB {
+  display: none;
+}
+
+/* 큰 화면 전용 */
+@media (min-width:768px) {
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--large-width);
+    margin: auto;
+  }
+
+  .headB ul {
+    display: flex;
+  }
+
+  .headB a {
+    font-size: 14px;
+  }
+
+  .headC {
+    display: none;
+  }
+
+  .headB {
+    display: block !important;
+  }
+}
+
+/* conA - 로고, hero 이미지 */
+.conA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/fruits.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 450px;
+  color: var(--text-bright-color);
+  text-align: center;
+}
+
+.conA h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15vw;
+  letter-spacing: 0.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 0.2em;
+}
+
+.conA img {
+  width: 20%;
+}
+
+.conA p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 3vw;
+}
+
+.conA a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: 3px solid currentColor;
+  color: #fff;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.conA a:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+@media (min-width: 768px) {
+  .conA h1 {
+    font-size: 115px;
+  }
+
+  .conA p {
+    font-size: 23px;
+  }
+}
+
+/* conB - 컨텐츠 B: icon + 글 내용 */
+.conB .container {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.conB .text {
+  text-align: center;
+  padding: 0 20px 60px;
+}
+
+.conB h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.conB p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.conB a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.conB a:hover {
+  text-decoration: underline;
+}
+
+.conB .icon {
+  display: inline-block;
+  width: 2em;
+  font-size: 40px;
+  background-color: #ddd;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .conB .container {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .conB .text {
+    flex: 1
+  }
+}
+
+/* conC - 콘텐츠C: 사진,글자 */
+.conC {
+  background-color: #5D9AB2;
+  color: #fff;
+}
+
+.conC .text {
+  padding: 20px;
+}
+
+.conC h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.conC p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.conC a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: 3px solid currentColor;
+  color: #fff;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.conC a:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+.conC .photo {
+  background-image: url(../images/note.jpg);
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .conC .container {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .conC .photo {
+    flex: 3;
+  }
+
+  .conC .text {
+    flex: 2;
+  }
+}
+
+
+/* conD - 콘텐츠C: 사진,글자 */
+.conD .container {
+  padding-top: 2px;
+}
+
+.conD .text {
+  padding: 20px;
+}
+
+.conD h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.conD p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.conD a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: 3px solid currentColor;
+  color: #fff;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px #888;
+}
+
+.conD a:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+.conD .photo {
+  background-image: url(../images/life.jpg);
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .conD .container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .conD .photo {
+    flex: 0 0 400px;
+  }
+
+  .conD .text {
+    flex: 1;
+  }
+}
+
+/* footer */
+footer {
+  background-color: var(--dark-main-color);
+  color: #fff;
+}
+
+footer .container {
+  padding: 40px 20px;
+}
+
+.footA {
+  margin-bottom: 30px;
+}
+
+.footA h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+}
+
+.footA p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.footA a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footD {
+  margin-top: 20px;
+}
+
+.footD ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footD a {
+  display: block;
+  margin-right: 8px;
+  padding: 0;
+  color: inherit;
+  font-size: 16px;
+  text-decoration: none;
+  border: 1px solid currentColor;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.footD a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footB div {
+  margin-bottom: 20px;
+}
+
+.footB h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid currentColor;
+  font-size: 14px;
+}
+
+.footB ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footB a {
+  display: block;
+  padding: 5px;
+  color: inherit;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footB a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width:768px) {
+  .footB {
+    display: flex;
+  }
+
+  .footB div {
+    flex: 1;
+  }
+
+  .footB div:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .footA {
+    flex: 0 0 40%;
+  }
+
+  .footB {
+    flex: 0 0 60%;
+  }
+
+  .footC {
+    flex: 0 0 100%;
+  }
+}
+
+.footC {
+  text-align: center;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* contents page */
+.nohero header {
+  position: static;
+  border-bottom: 1px solid #ddd;
+}
+
+.post .container {
+  max-width: var(--large-width);
+  margin: auto;
+  padding: 30px 10px;
+}
+
+.post h1 {
+  padding-left: 0.5rem;
+  border-left: 0.75rem solid var(--accent-color);
+  font-size: 2rem;
+}
+
+.post p {
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.bread ol{
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.bread a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+}
+
+
+.bread a::after{
+  margin-left: 10px;
+  content: "\003E";
+  font-family: "FontAwesome";
+  opacity: 0.3;
+}
+
+.bread a:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* LOG page */
+.conpact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/balloon.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  color: var(--text-bright-color);
+  text-align: center;
+}
+
+.listA .container {
+  display: flex;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+
+.listA article {
+  flex: 1 1 300px;
+}
+
+.listA .photo{
+  min-height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.listA a{
+  margin: 10px;
+  display: block;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: inherit;
+}
+
+.listA a:hover {
+  opacity: 0.8;
+}
+
+.listA h2{
+  font-size: 18px;
+}
+.listA p{
+  font-size: 14px;
+  opacity: 0.8;
+}
+.listA .text{
+  margin: 10px;
+}
