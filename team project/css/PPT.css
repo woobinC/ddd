@@ -1,0 +1,99 @@
+href{
+  color: black
+}
+body{
+    background-color: #040714;
+   margin: 0;
+}
+h2{
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 38px;
+
+}
+
+/* foot  */
+.foot1{
+    font-family: '맑은 고딕' sans-serif; 
+    font-size: 20px;
+    background-color: #13151D;
+    color: white;
+    border: 1px solid #13151D;
+    padding: 15px;
+    cursor: pointer;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+    position:relative;
+    margin-top: 25px;
+  }
+
+  .foot2{
+      display: none;
+      font-family: '맑은 고딕' sans-serif; 
+      font-size: 14px;
+      background-color: #13151D;
+      color: white;
+      opacity: 0.8;
+      border: 1px solid #13151D;
+      padding: 15px;
+      cursor: pointer;
+      width: 80%;
+      margin: auto;
+      font-weight: bold;
+    
+    }
+    /* footer */
+    .footer{
+      background-position: center;
+    }
+
+    .foot1::after{
+      content:"+";
+      display:inline-block;
+      position:absolute;
+      right:30px;
+      
+    }
+
+    img{
+      width: 80px;
+      margin: 0 50% 20px;
+    }
+    
+    a{
+      color: white;
+      opacity: 0.8;
+      text-decoration: none;
+      text-align: center;
+      margin: auto;
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    h4{
+      text-align: center;
+      font-size: 12px;
+      color: white;
+      opacity: 0.6;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .click{
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 3px;
+     align-content: center;
+    }
+  
+    li{
+      padding: 15px;
+      }
+
+      .link{
+        text-align: center;
+      }
+    
+   

@@ -1,0 +1,300 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    background-color: #0e0b14;
+
+}
+
+.movie_posters h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    color: #f9f9f9;
+    text-align: center;
+}
+
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posters .poster {
+    flex: 45%;
+    padding: 10px;
+
+}
+
+.poster img {
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .posters .poster {
+        flex: 30%;
+    }
+}
+
+@media (max-width: 1025px) {
+    .posters .poster {
+        flex: 30%;
+    }
+}
+
+
+.mender {
+    width: 354;
+    height: 512;
+   
+}
+
+.p {
+    color: #f9f9f9;
+
+
+}
+
+
+h3 {
+    color: #f9f9f9;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+    font-size: 24px;
+
+}
+
+.medium  .p{
+    font-size: 16px;
+    font-family: Inspire-KO,sans-serif;
+}
+
+
+
+/* .poster .last{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    aspect-ratio: auto 630 / 354;
+} */
+
+
+section * {
+    scroll-margin-top: 75px;
+    scroll-padding-top: 75px;
+}
+
+section {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: block;
+}
+
+.h2 {
+    color: #f9f9f9;
+   font-size: 32px;
+   margin-bottom: 0;
+   text-align: center;
+}
+
+
+/* @media screen (max-width: 768px);section:has(.chart){
+    padding-left: 0;
+    padding-right: 0;
+    } */
+.center {
+    color: #f9f9f9;
+}
+
+
+
+
+
+.test1 .inner a:hover {
+    filter: brightness(0.9);
+    /* background: #0682f0; */
+}
+
+
+.test2 {
+    display: flex;
+}
+
+.test2 .click a {
+    display: block;
+    text-align: center;
+    width: 150px;
+    line-height: 3;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #02d6e8;
+  
+}
+
+.test2 .click button a:hover {
+    filter: brightness(0.9);
+    /* background: #0682f0; */}
+
+.tt{
+    border-bottom: 1px solid white;
+}
+
+
+
+
+
+
+.center {
+    font-size: 16px;
+ 
+}
+
+.center .h2 {
+    text-align: center;
+}
+
+
+
+
+.movie_page h2 {
+    font-size: 30px;
+    line-height: 1.2;
+    color: #f9f9f9;
+    text-align: center;
+}
+
+.movie_page p {
+    font-size: 16px;
+    line-height: 1.2;
+   color: white;
+    text-align: center;
+}
+
+.pages {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pages .page {
+    flex: 45%;
+    padding: 10px;
+
+}
+
+.page img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .pages .page {
+        flex: 30%;
+    }
+}
+
+
+@media (max-width: 1025px) {
+    .pages .page {
+        flex: 30%;
+    }
+}
+
+
+.text-medium {
+    font-size: 14px;
+    text-align: center;
+    /* display: block; */
+}
+
+
+.medium{
+    font-size: 16px;
+    font-family: sans-serif;
+    
+}
+
+.tlie {
+    font-size: 12px;
+    margin: 20px 0 0;
+    line-height: 16px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.test{
+    display:flex;
+    justify-content: space-around;
+    /* text-align: center; */
+}
+.test .box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.test .box a{
+    display: block;
+    text-align: center;
+    width: 150px;
+    line-height: 3;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid;
+    color: white
+
+}
+
+.test .box a:hover {
+   
+    background: white;
+    color: black;
+}
+
+
+.test1 {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-content: space-around;
+    justify-content: space-around;
+}
+ 
+
+.test1 .inner a {
+    display: block;
+    text-align: center;
+    width: 150px;
+    line-height: 3;
+    /* height:50px; */
+    border-radius: 5px;
+    text-decoration: none;
+    background: #02d6e8;
+    color: black 
+}
+
+
+p{text-align: center;}
+
+
+.check{
+    background-color: white;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 21px ;
+}
+
+
+
+.name{
+    color: #f9f9f9;
+text-align: inherit;
+cursor: pointer;
+font-family: sans-serif;}
+
+.test1 .gray{
+    background-color: #ddd;}
+.inner{
+    background-color: #1d1f2b;
+}
+

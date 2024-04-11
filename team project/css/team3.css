@@ -1,0 +1,110 @@
+
+body{
+    background-color: #040714;
+   margin: 0;
+}
+.a1{
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 38px;
+
+}
+
+/* footer */
+  footer{
+    background-position: center;
+    width: 80%;
+    margin: auto;
+  }
+
+.foot1{
+    font-family: '맑은 고딕' sans-serif; 
+    font-size: 20px;
+    background-color: #13151D;
+    color: white;
+    border: 1px solid #13151D;
+    padding: 15px;
+    cursor: pointer;
+    /* width: 100%; */
+    /* margin: auto; */
+    font-weight: bold;
+    position:relative;
+    margin-top: 25px;
+  }
+
+  .foot2{
+      display: none;
+      font-family: '맑은 고딕' sans-serif; 
+      font-size: 14px;
+      background-color: #13151D;
+      color: white;
+      opacity: 0.8;
+      border: 1px solid #13151D;
+      padding: 15px;
+      cursor: pointer;
+      /* width: 80%; */
+      /* margin: auto; */
+      font-weight: bold;
+    
+    }
+    .foot2 a{
+     opacity: 1;
+      color: white;
+    }
+  
+    .foot1::after{
+      content:"+";
+      display:inline-block;
+      position:absolute;
+      right:30px;
+      
+    }
+
+    .a2{
+      text-align: center;
+      /* margin: 0 50% 20px; */
+    }
+    .a2 img{width: 80px;}
+    
+    .a4{
+      text-align: center;
+      font-size: 12px;
+      color: white;
+      opacity: 0.6;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .click{
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 3px;
+     align-content: center;
+     text-decoration: none;
+     color: white;
+    }
+  
+    .a3{
+      padding: 15px;
+      }
+
+ .link{
+  margin: auto;
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+ }
+ .a5{
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+ }
+ 
+ .under{
+  margin-top: 130px;
+ }

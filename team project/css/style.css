@@ -1,15 +1,15 @@
-
+/* 바디 기본 설정 */
 body {
   margin: 0;
   background-color: #040714;
 }
+
+/* 헤더 */
 header {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1;
 }
+
 header ul {
   margin: 0;
   padding: 0;
@@ -22,12 +22,12 @@ header li {
 }
 
 header a {
-  display:inline-block;
+  display: inline-block;
   margin-right: 10px;
   color: white;
   font-size: 13px;
   text-decoration: none;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid silver;
   border-radius: 3px;
   padding: 8px;
@@ -38,50 +38,121 @@ header a:hover {
   color: black;
 }
 
-.mainA {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  color: white;
-  text-align: center;
+/* 메인 */
+@media(min-width:768px){
+  .kind {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 0;
+  }
 }
 
-.mainA h1{
+@media(min-width:1025px) {
+  .mainA .container {
+    position: relative;
+  }
+  .mainA .slideshow {
+    position: absolute;
+  }
+  #hero_desc{
+    text-align: left;
+    position: absolute;
+    left: 55px;
+    top: 80px;
+    padding: 0;
+  }
+  .cover_img {
+    height: 600px;
+  }
+  .hero_desc > .disney_logo > img {
+    width: 150px;
+  }
+  #hero_desc h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    letter-spacing: -2px;
+  }
+  #hero_desc h2 {
+    font-size: 24px;
+    margin-bottom: 0;
+    letter-spacing: -2px;
+  }
+}
+
+.mainA .container {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.cover_img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.mainA .hero_desc {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 40vw 0 0;
+}
+
+.kind h1 {
   font-size: 24px;
   margin-bottom: 25px;
   margin-top: 5px;
+  letter-spacing: -1px;
 }
 
-.mainA h2{
+.kind h2 {
   font-size: 18px;
   margin-bottom: 0;
 }
 
-.mainA p{
+.mainA p {
   margin: 0;
-  font-size: 9px;
+  font-size: 10px;
   color: gray;
-  font-weight: bold;
+  font-weight: 900;
+  letter-spacing: -1px;
 }
 
-.mainA .tax {
-  margin-top: 10px;
+.kind .tax {
+  margin-top: 20px;
 }
 
 .mainA .big {
   margin: 20px;
-  font-size: 11px;
+  font-size: 12px;
+  letter-spacing: -1px;
 }
 
 .big a {
   color: white;
 }
 
-.conB a {
+.standard a {
   display: inline-block;
-  padding: 10px 100px;
-  background-color: skyblue;
+  padding: 12px 100px;
+  background-color: #02D6E8;
   border-radius: 4px;
   text-decoration: none;
   color: black;
@@ -89,10 +160,10 @@ header a:hover {
   margin-top: 5px;
 }
 
-.conC a {
+.premium a {
   display: inline-block;
-  padding: 10px 100px;
-  background-color: skyblue;
+  padding: 12px 100px;
+  background-color: #02D6E8;
   border-radius: 4px;
   text-decoration: none;
   color: black;
@@ -100,16 +171,13 @@ header a:hover {
   margin-top: 5px;
 }
 
-.conA .backimg {
-  min-height: 350px;
-}
-
-.img > img {
+.disney_logo>img {
   width: 100px;
   margin: 0;
 }
 
-.logfoot ul{
+/* 로그인 창 */
+.logfoot ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -126,13 +194,85 @@ header a:hover {
   background-color: white;
   font-size: 10px;
   font-weight: bold;
+  height: 150px;
 }
 
-.logfoot a{
+.logfoot a {
   color: gray;
   text-decoration: none;
 }
 
 .logfoot a:hover {
   color: black;
+}
+
+.logmain {
+  background: linear-gradient(225deg, #051828, #055463);
+  height: 700px;
+}
+
+.logmain .logform {
+  margin: auto;
+  height: 250px;
+  width: 350px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px 50px 20px 50px;
+}
+
+.logform span {
+  font-size: 8px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.logform p {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.logform h3 {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.logform .log_email {
+  width: 96%;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  outline: 0;
+}
+
+.log_email:focus {
+  border-bottom: 1px solid black;
+}
+
+.logform .log_submit {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.logform .log_submit:hover {
+  cursor: pointer;
+}
+
+.logmain .logimg {
+  text-align: center;
+}
+
+.logimg img {
+  width: 130px;
+  padding: 20px;
 }
