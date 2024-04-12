@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- html은 위에부터 순서대로 읽기 때문에(sad가 나오기 전에 명령해서) 오류남 -->
+  <script>
+    document.write("<p>밤 좀 주세요</p>")
+    document.getElementById("change").innerHTML = "I`m so happy:)";
+  </script>
+
+  <!-- extenal js -->
+  <!-- <script src="myscript.js"></script> -->
+
+
+</head>
+
+<body>
+  <h1>How to use Javascript?</h1>
+  <div id="change">I`m so sad :(</div>
+  <button onclick="change()">가을이 오는 소리</button>
+
+  <script>
+    // javascript comment
+    // => 한 줄 주석
+    document.getElementById("change").innerHTML = "I`m so happy:)"; // 주석
+    // 여러 줄 , 부분 주석 => /* */
+/*     자바스크립트 명령문 뒤에는 항상 세미클론을 써야 한다 아닐 경우에 에러가 나지 않을 수도 있지만 예상치 않은 코드 오류가 발생할 수 있다. */
+    function change() {
+      document.getElementById("change").innerHTML = "가을이 다가올 때";
+    }
+  </script>
+  <script src="myscript.js"></script>
+
+  <hr>
+<!-- inline js -->
+<a href="javascript:void(0)"; onclick="document.getElementById('change').innerHTML=Date()">슬프거나 말거나 현재 시간이나 알려주세요</a>
+
+
+</body>
+
+</html>
