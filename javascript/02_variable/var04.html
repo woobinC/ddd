@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="main_title"></h1>
+
+  <script>
+    //num1이 num2보다 크면 Javascript로 출력, 작거나 같으면 Spring으로 출력
+    let num1 = prompt("첫번째 숫자입력");
+    let num2 = prompt("두번째 숫자입력");
+
+    if (num1 > num2) {
+      document.getElementById("main_title").innerHTML = "Javascript";
+    }
+    else {
+      document.getElementById("main_title").innerHTML = "Spring";
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>3항식</h2>
+  <p>식? true일 때의 명령 : false일 때의 명령</p>
+  <script>
+    //사용자로부터 입력받은 숫자가 짝수인 경우 "짝수입니다"를, 홀수인 경우 "홀수입니다"를 출력하는 코드를 3형식으로 작성.
+    // let num = prompt("숫자 입력");
+    // let result = num % 2 == 0? "짝수입니다" : "홀수입니다";
+    // console.log(result);
+
+    //prompt로 두 수를 입력 받아 앞의 수가 크면 "Java"를 , 뒤의 수가 크거나 같으면 "Python"을 콘솔에 출력하시오. 3항식 사용
+
+    let num1 = prompt("첫번째 숫자")
+    let num2 = prompt("두번째 숫자")
+    let sum = parseInt(num1) > parseInt(num2)? "Java" : "Python"
+    console.log(sum);
+  </script>
+</body>
+</html>

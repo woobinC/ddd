@@ -17,9 +17,13 @@
   <p>변수명은 변수에 저장된 값을 의미하는 가급적 정확한 단어를 사용하는 것이 좋다.</p>
   <p>변수에 저장된 값의 타입을 알기위해 typeof 라는 명령어를 사용</p>
 
+  <h2>변수 사용의 이유</h2>
+  <p>긴 값을 용이하게 사용하기 위해</p>
+  <p>값의 변경을 용이하게 하고 데이터의 일관성을 유지하기 위해</p>
+  <p>값의 의미를 변수명을 통해 쉽게 확인하기 위해</p>
   <script>
     // 변수 a를 선언 - a라는 변수를 사용하기 위해 메모리에 공간을 잡아둠.
-    var a;
+    var a; //let, count
     // 변수 a에 값 7을 저장 - a로 표시된 메모리 공간에 7을 쓴다
     a = 7;
     // 변수 a에 저장된 값을 꺼내서 console에 출력하라
@@ -29,7 +33,7 @@
     // console.log(aa); //aa is not defined
 
     // 변수 b를 선언하고 b에 "안녕하세요" 문자열로 초기화
-    var b = "안녕하세요";
+    var b = "안녕하세요";///
     console.log(b);
 
     // 변수 c를 선언하고 3.14라는 실수로 초기화
@@ -43,15 +47,18 @@
     // 변수 e를 선언하고 Date라는 함수,객체(object)로 결과값(문자열) 초기화
     var e = Date();
     console.log(e);
+    // 변수 f를 선언하고 Date라는 함수,객체(object)자체 코드로 초기화
+    var f = Date;
+    console.log(f);
 
-    a = "끝날 시간"
+    // a = "끝날 시간"
     console.log(a);
     console.log("-------------------------")
-    console.log(typeof a)
-    console.log(typeof b)
-    console.log(typeof c)
-    console.log(typeof d)
-    console.log(typeof e)
+    console.log("정수: " + typeof a)
+    console.log("문자열: " + typeof b)
+    console.log("실수: " + typeof c)
+    console.log("true, false: " + typeof d)
+    console.log("Date 함수: " + typeof e)
 
   </script>
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>변수 선언과 사용</h1>
+  <p>변수는 항상 선언하고 사용하라.</p>
+  <p>초기화 값이 변할 수 없는 변수(array, object)는 const 사용</p>
+  <p>const를 사용할 수 없는 변수에는 let 사용</p>
+  <p>과거 코드, 구형 브라우저용 스크립트에 var 사용</p>
+
+  <h1>변수명 원칙</h1>
+  <p>사용 가능 문자: 알파벳, 숫자, 언더바, &</p>
+  <p>문자, &, _로 시작해야 함</p>
+  <p>대소문자 구분 - y,Y 서로 다른 변수로 취급</p>
+  <p>예약어 사용 불가 (function, let 등등)</p>
+  <script>
+    //x = 5;
+    //y = 6;
+    //z = x + y;
+    //console("x = " + x + " / y = "+y+" / z = "+z);
+
+    //let x = 5;
+    //let y = 6;
+    //let z = x + y;
+    //console("x = " + x + " / y = "+y+" / z = "+z);
+
+    //const x = 5;
+    //const y = 6;
+    //const z = x + y;
+    //console("x = " + x + " / y = "+y+" / z = "+z);
+
+    const x = 5;
+    const y = 6;
+    let z = x + y;
+    console("x = "+x+" / y = "+y+" / z = "+z);
+
+    let age = 13;
+    let Age = 35;
+    console.log("age: " + age + "/Age: " + Age);
+  </script>
+</body>
+</html>

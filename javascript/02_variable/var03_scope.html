@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>변수의 scope</h2>
+  <p>변수를 이용할 수 있는 범위</p>
+  <p>ES6(2015) 이전에는 자바스크립트에 블록 스코프가 없었음(블록 내부에서 선언한 변수가 바깥에서도 접근 가능했음)</p>
+  <p>liet, const는 블록 스코프 있음</p>
+  <p>liet, const는 다시 선언할 수 없다</p>
+  <p>liet, const는 사용하기 전에 반드시 선언해야 한다.</p>
+  <p>liet, const는 this와 bind할 수 없다.</p>
+  <p>liet, const는 hoist 기능 사용 불가.</p>
+  
+
+  <script>
+    a = 7; // 사용 가능. 자동으로 var a = 7로 됨
+    var a; // 뒤에서 선언해도 문제 없음
+    var a = 9; // 앞에서 선언하여 사용하는 변수를 새로 선언해도 문제 없음
+    console.log(a);
+
+    //let a = 8; //앞에서 이미 선언된 변수를 다시 선언하고 있으므로 에러
+    let c = 33;
+    console.log(c);
+  </script>
+
+  <script>
+    //a처럼 페이지 어디에서나 사용가능한 변수 - 전역변수
+    a = 11;
+    console.log(a);
+
+    // {블록 스코프}
+    if(true){
+      console.log(a);
+      //블록 안에서 선언 및 초기화
+      var b = 3;
+      console.log(b);
+
+      //블록 바깥에서 c를 선언하여 사용하고 있지만 블록 내부에서 선언한 c는 완전히 다른 변수라서 블록 안에서만 사용 가능
+      let c = 55;
+      console.log(c);
+
+      let d = 77;
+      console.log(d);
+    }
+    //블록 바깥에서도 보임
+    console.log(b);
+    // 33 - 블록 바깥이어서 블록 바깥에서 사용하는 변수값 출력
+    console.log(c);
+    // 블록 안에서 선언한 변수는 블록 바깥에서 접근 불가능
+    // console.log(d);
+
+    //const - 생수(정해진 값 - 변경 불가능한 값) 변수
+    const PI = 3.141592;
+    console.log(PI)
+    //PI = 3.14
+  </script>
+</body>
+</html>

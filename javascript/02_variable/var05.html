@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>입력창 3개(두 개는 입력용, 하나는 결과 출력용)와 연산버튼 4개 만들어서 사칙연산 수행</h2>
+
+  num1: <input type="text" id="num1" name="num1"> <br><br>
+  num2: <input type="text" id="num2" name="num2">
+
+  <hr>
+  <button onclick="plus()">+</button>
+  <button onclick="minus()">-</button>
+  <button onclick="multi()">*</button>
+  <button onclick="divide()">/</button>
+  <hr>
+  result: <input type="text" id="result">
+
+  <script>
+    //id가 num1인 엘리먼트의 value 값을 가져와 변수 num1에 저장
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    //id가 result인 엘리먼트를 변수 resulte에 저장
+    let result = document.getElementById("result");
+
+    //function - 함수
+    function plus(){
+      result.value = parseInt(num1.value) + parseInt(num2.value);
+    }
+    function minus(){
+      result.value = parseInt(num1.value) + parseInt(num2.value);
+    }
+    function multi(){
+      result.value = parseInt(num1.value) + parseInt(num2.value);
+    }
+    function divide(){
+      result.value = parseInt(num1.value) + parseInt(num2.value);
+    }
+    
+  </script>
+</body>
+
+</html>

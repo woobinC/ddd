@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>prompt</h1>
+  <h3>내 이름은 <span id="name">jimi</span>입니다.</h3>
+  <h3>내 행운의 숫자는 <span id="lucky"></span>입니다.</h3>
+  <script>
+    // alert("자바 스크립트 재미 짱!!!");
+
+    //prompt로 문자열 입력 받기
+    // let name = prompt("your name? >>>")
+    // alert(name);ㅇㅇ
+    // document.getElementById("name").innerHTML = name;
+
+    let lucky_num = prompt("행운의 숫자:");
+    // alert(lucky_num);
+    // id - lucky에 입력받은 값 출력
+
+    document.getElementById("lucky").innerHTML = lucky_num;
+
+    // string : prompt 함수는 입력 받은 값을 문자열로 변환 7 => "7"
+    // alert(typeof lucky_num);
+
+    // 입력받은 값의 연산시 문제 발생
+    // let result = lucky_num * 3; // 문제없음 - 연산 잘 됨
+    // 덧셈일 때는 문자열끼리 합치는 것으로 이해 - 문제발생
+    // parseInt() 같은 함수를 이용해서 타입 변환하여 연산
+    // - 입력 받을 때 바로 변환, 연산 전에 변환 모두 ok.
+    // parseInt(prompt("행운의 숫자: >>>"))
+    // parseInt(lucky_num)
+    let result = parseInt(lucky_num) + 3;
+    alert(result);
+  </script>
+</body>
+</html>
