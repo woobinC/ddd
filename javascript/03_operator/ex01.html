@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>초간단 건강 측정기</h1>
+  <h3>체중: <input type="text" id="weight"></h3>
+  <h3>신장: <input type="text" id="height"></h3>
+  <h3>이름: <input type="text" id="name1"></h3>
+
+  <button type="button" onclick="check()">건강 측정</button>
+  <hr>
+  <div><span id="name2"></span>님은 <span id="result"></span>입니다.</div>
+
+  <script>
+    // weight가 normal보다  5킬로 많으면 -> 과체중, 범위 안에 있으면 - 적정 체충, 5키로 적으면 - 저체중
+    // normal = (height - 100) * 0.9
+    const weight = document.getElementById("weight");
+    const height = document.getElementById("height");
+    const name = document.getElementById("name1");
+
+    function check() {
+      let normal = (parseInt(height.value) - 100) * 0.9;
+      alert(normal)
+      document.getElementById("name2").innerHTML = name.value
+      document.getElementById("result").innerHTML = parseInt(weight.value) >= (normal + 5) ? "과체중" : parseInt(weight.value) <= (normal - 5)? "저체중" : "적정체중";
+    }
+    
+  </script>
+</body>
+
+</html>

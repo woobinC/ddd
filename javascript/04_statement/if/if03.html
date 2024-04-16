@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>중첩 if</h1>
+  <fieldset>
+    <legend>로그인</legend>
+    <form action="" method="post">
+      <label for="id">id</label> <br>
+      <input type="text" name="id" id="id">
+      <hr>
+      <label for="password">password</label> <br>
+      <input type="password" name="password" id="password">
+      <hr>
+      <button type="button" onclick="login()">로그인</button>
+    </form>
+  </fieldset>
+
+  <script>
+    let myId = "wow";
+    let myPw = "1234";
+
+    function login() {
+      let id = document.getElementById("id").value;
+      let pw = document.getElementById("password").value;
+
+      if (id === "" || id === null) {
+        alert("아이디 입력하세요");
+        return false
+      }
+
+      if (pw === "" || pw === null) {
+        alert("비밀번호 입력하세요");
+        return false
+      }
+
+      if (id === myId) {
+        if(pw === myPw) {
+          alert("로그인 성공");
+        }else {
+          alert("비밀번호가 틀렸습니다.")
+        }
+      }else {
+        alert("아이디가 틀렸습니다.");
+      }
+    }
+  </script>
+
+</body>
+</html>

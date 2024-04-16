@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>홀짝 판정</h1>
+  n1 : <input type="number" id="n1"><br><br>
+  n2 : <input type="number" id="n2"><br><br>
+  <button type="button" onclick="check()">홀짝 판정</button><br><br>
+  <div>숫자 1과 2의 합은 <mark><span id="result"></span></mark>입니다.</div>
+
+  <script>
+    const n1 = document.getElementById("n1");
+    const n2 = document.getElementById("n2");
+    let result;
+
+
+    function check() {
+      result = parseInt(n1.value) + parseInt(n2.value);
+      document.getElementById("result").innerHTML = result % 2 == 0 ? "짝수" : "홀수";
+    }
+  </script>
+</body>
+
+</html>

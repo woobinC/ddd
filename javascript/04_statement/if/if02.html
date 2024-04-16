@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>if - 조건문</h1>
+
+  <h3>현재 시간은 <span id="hour"></span>시 <span id="min"></span>분 입니다.</h3>
+  <p id="greeting">시간에 맞는 인사말</p>
+
+  <script>
+    let hour = document.getElementById("hour");
+    let min = document.getElementById("min");
+    let greeting = document.getElementById("greeting");
+
+    //Date 클래스의 생성자를 실행하여 문자열을 반환받아 today 변수에 저장
+    let now = Date();
+    console.log(now);
+    console.log(typeof now);
+    //Date 클래스의 오브젝트를 새로 만들어서 now에 저장
+    now = new Date();
+    console.log(now);
+    console.log(typeof now);
+    
+    let now_hour = now.getHours();
+    console.log(now_hour);
+    let now_min = now.getMinutes();
+    console.log(now_min);
+
+    hour.innerHTML = now_hour
+    min.innerHTML = now_min
+
+    if(now_hour < 10 ) {
+      greeting.innerHTML = "Good Morning"
+    }else if (now_hour < 18) {
+      greeting.innerHTML = "Good Afternoon"
+    }else {
+      greeting.innerHTML = "Good Evening"
+    }
+
+  </script>
+</body>
+</html>
