@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>월을 입력 받아서  "봄", "여름", "가을", "겨울" 중 하나를 출력하는 자바스크립트 코드를 작성하세요. 
+    입력한 값이 3, 4, 5이면 "봄", 6, 7, 8이면 "여름", 9, 10, 11이면 "가을", 
+    12, 1, 2이면 "겨울"을 출력합니다.</h2>
+
+    <script>
+      let month = parseInt(prompt("월을 입력하세요"));
+
+      let season;
+
+      switch(month){
+        case 3: case 4: case 5:
+          season = "봄";
+          break;
+        case 6: case 7: case 8:
+          season = "여름";
+          //중첩 switch
+          switch(month){
+            case 7:
+              season = "한" + season;
+              break;
+            case 8:
+              season = "미친" + season;
+              break;
+          }
+          break;
+        case 9: case 10: case 11:
+          season = "가을";
+          break;
+        case 12: case 1: case 2:
+          season = "겨울";
+          break;
+        default:
+          season = "1~12 입력";
+      }
+      console.log(season);
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1><a href="" id="link">어디로 갈까?</a></h1>
+
+  <script>
+    let link = document.getElementById("link");
+    let rand = parseInt(Math.random()*100) + 1;
+
+    //switch 문 서서 추출한 수가 홀수 > daum, 짝수 > naver 링크 지정
+
+    switch(rand % 2) {
+      case 0:
+        link.setAttribute("href", "http://www.daum.net");        
+        break;
+      default:
+        link.setAttribute("href", "http://www.naver.com");
+    }
+
+
+
+  </script>
+</body>
+</html>

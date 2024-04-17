@@ -9,7 +9,12 @@
   <h2>오늘은 <span id="yoil"></span>요일 입니다.</h2>
 
   <script>
-    let today = new Date();
+    let year = prompt("연도");
+    let month = prompt("달");
+    let date = prompt("일");
+
+    let today = new Date(year, month-1, date);
+    console.log(today);
     let day = today.getDay();
     console.log("day: " + day);
     let yoil = document.getElementById("yoil");
