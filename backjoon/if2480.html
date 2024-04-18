@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="price">1</h1>
+
+  <script>
+    let num1 = parseInt(prompt("숫자1"));
+    let num2 = parseInt(prompt("숫자2"));
+    let num3 = parseInt(prompt("숫자3"));
+    let n1 = 10000;
+    let n2 = 1000;
+    let n3 = 100;
+    let sum = 0;
+
+    if (num1 == num2 && num1 == num3) {
+      sum = n1 + n2 * num1;
+    }else if (num1 != num2 || num1 != num3) {
+      if(num2 == num3){
+        sum = n2 + n3* num2;
+      }else if(num1 == num2 || num1 == num3){
+        sum = n2 + num1 * n3;
+      }else if(num1 > num2 && num1 > num3){
+        sum= n3* num1;
+      }else if(num2 > num3){
+        sum = n3 * num2;
+      }else{
+        sum = n3 * num3;
+      }
+    }else{
+      
+    }
+    
+    document.getElementById("price").innerHTML = sum;
+    
+
+  </script>
+</body>
+</html>

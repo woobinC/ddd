@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ace in bluestream</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/images/Ace_icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1>합계를 구하시오</h1>
+    <span id="err"></span><br>
+    <label for="n1">start no: </label><br>
+    <input type="text" id="n1"><br>
+    <label for="n2">end no: </label><br>
+    <input type="text" id="n2"><br>
+
+    <hr>
+    <button onclick="calcul()">연속수 합계 구하기</button>
+    <p id="answer">합계</p>
+
+    <script>
+        function calcul() {
+            // let n1 = document.getElementById("n1");
+            // let n2 = document.getElementById("n2");
+            // let n1_value = parseInt(n1.value);
+            // let n2_value = parseInt(n2.value);
+
+            let n1 = parseInt(document.getElementById("n1").value);
+            let n2 = parseInt(document.getElementById("n2").value);
+            let answer = document.getElementById("answer");
+            console.log("n1 :  " + n1);
+            let err = document.getElementById("err");
+
+            if (isNaN(n1) || isNaN(n2)) {
+                //alert("숫자를 쓰셈 ㅋㅋㅋ");
+                err.innerHTML = "숫자를 쓰셈 ㅋㅋㅋ";
+
+                // n1.value = "";
+                // n2.value = "";
+                // n1.focus();
+                return;
+            } else if (n1 > n2) {
+                err.innerHTML = "시작번호는 끝번호보다 작아야 한다 ㅋㅋㅋ";
+
+                return;
+            }
+
+            let pw = "1234";
+            let password;
+            let cnt = 0;
+
+            do{
+              if(cnt >= 1){
+                alert("비밀번호 오류");
+              }
+              if (cnt > 4){
+                err.innerHTML = "비밀번호 5회 오류"
+                return;
+              }
+              password = prompt("비밀번호 입력");
+              cnt++;
+            }while(password != pw);
+
+            let sum = 0;
+            for (let i = n1; i <= n2; i++) {
+                sum += i;
+            }
+            answer.innerHTML = sum;
+            err.innerHTML = "";
+
+        }
+    </script>
+
+</body>
+
+</html>

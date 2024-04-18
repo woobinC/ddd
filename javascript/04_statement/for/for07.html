@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>합계를 구하시오</h1>
+  <label for="n1">start no: </label><br>
+  <input type="test" id="n1"><br>
+  <label for="n2">end no: </label><br>
+  <input type="text" id="n2"><br>
+  <span id="err"></span>
+  <hr>
+  <button onclick="calcul()">연속 수 합계 구하기</button>
+  <p id="answer">합계</p>
+
+  <script>
+
+    function calcul() {
+      let n1 = parseInt(document.getElementById("n1").value);
+      let n2 = parseInt(document.getElementById("n2").value);
+      let answer = parseInt(document.getElementById("answer"));
+
+      if (isNaN(n1) || isNaN(n2)) {
+        // alert("숫자 쓰세요");
+        err.innerHTML = "숫자를 쓰세요";
+        return;
+      } else if (n1 > n2) {
+        err.innerHTML = "start no는 end no 보다 작아야 한다";
+      } else {
+
+        let sum = 0;
+        for (let i = n1; i <= n2; i++) {
+          sum += i;
+        }
+        document.getElementById("answer").innerHTML = sum;
+        err.innerHTML = "";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

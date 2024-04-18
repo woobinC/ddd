@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    let a = parseInt(prompt("숫자1"));
+
+    let sum = 0;
+
+    console.log(a);
+    while(true){
+      let num1 = parseInt(Math.random()* 10)+1 ;
+    let num2 = parseInt(Math.random()* 10)+1 ;
+      if(a == 0){
+        break;
+      }
+      sum = num1 + num2;
+      console.log(num1 + " + " + num2 +" = " + sum );
+      a--;
+    }
+    
+    
+  </script>
+</body>
+</html>

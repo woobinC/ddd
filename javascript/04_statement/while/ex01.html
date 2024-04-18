@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>while 연습</h1>
+
+  <script>
+    //while문을 사용하여 prompt로 숫자를 입력받고 그 값만큼 "사랑해"를 반복 출력 하시오(console) 0이 들어오면 중단.
+
+    // let num = parseInt(prompt("숫자"));
+    // let love = "";
+
+    // while (num > 0){
+    //   love += "사랑해 ";
+    //   num--;
+    // }
+
+    // console.log(love);
+
+
+    let num1;
+    while(true){
+      num = Number(prompt("숫자 입력"));
+      if(num == 0) {
+        break;
+      }
+
+    
+      // for(let i = 0; i < num1 ; i++){
+      //   console.log("i love you : " + (i+1));
+      // }
+      let i = 0;
+      while(i < num){
+        console.log("i love you : " + (i+1));
+        i++;
+      }
+      console.log("------------------")
+    }
+
+  </script>
+</body>
+</html>

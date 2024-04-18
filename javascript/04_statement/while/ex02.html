@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>while 연습</h1>
+
+  <script>
+    //while문으로 1~40사이의 짝수를 출력하고 합계를 구하여 출력
+
+    //for
+    // let sum = 0;
+    // for(let i = 1; i <= 40; i++) {
+    //   if(i % 2 ==0){
+    //     sum += i;
+    //   }
+    // }
+    // console.log(sum);
+
+    // //while
+    // let num = 1;
+    // let sum2 = 0;
+    // while(num <= 40){
+    //   num++;
+    //   if(num % 2 === 0){
+    //     sum2 += num;
+    //   }
+    // }
+    // console.log(sum2);
+
+
+    //while문 사용하여 1부터 숫자를 더하면서 합계가 3000이 넘으면 중단하고 최종 더해진 수와 합계를 출력하시오.
+    num = 1; sum2 = 0;
+
+    while(true) {
+      sum2 = sum2 + num;
+      if(sum2 > 3000) {
+        break;
+      }
+      num++;
+    }
+    console.log(num);
+    console.log(sum2);
+  </script>
+</body>
+</html>

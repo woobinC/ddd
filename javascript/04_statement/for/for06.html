@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>for문 연습</h2>
+  <p>출력은 console에 하시오</p>
+
+  <script>
+    // for(let i = 0; i <= 10; i++) {
+    //   console.log(i);
+    // }
+    
+    // for(let i = 10; i >= 0; i--) {
+    //   console.log(i);
+    // }
+
+    // for(let i = 0; i <= 10; i++) {
+    //   if(i % 2 ==0) {
+    //     console.log(i);
+    //   }
+    // }
+
+    // let sum = 0;
+
+    //   for(let i = 1; i <= 20; i +=2 ) {
+    //     console.log(sum += i);
+    //   }
+
+
+    // for(i = 2; i <= 9; i++) {
+    //   for(j = 1; j <= 9; j++) {
+    //     // console.log(i + "단 " + i + " X " + j + " = " + i * j);
+    //     // template literal 방식 출력
+    //    console.log(`${i}단 ${i} X ${j} = ${i*j}`);
+    //   }
+    //   console.log("-------------");
+    // }
+
+    // for(i = 3; i <= 9; i++) {
+    //   for(j = 1; j <= 9; j++) {
+    //     if(i % 2 == 1) {
+    //       console.log(`${i}단 ${i} X ${j} = ${i*j}`);
+    //     }
+    //   }
+    //   console.log("-------------");
+    // }
+
+      let cnt = 0; // 횟수 카운트
+    for(let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5; j++) {
+        if(i + j == 6){
+          console.log(`[ ${i} , ${j} ]`);
+        }
+        cnt++;
+      }
+ 
+    }
+console.log(` 총 횟수: ${cnt}`);
+
+  </script>
+</body>
+</html>

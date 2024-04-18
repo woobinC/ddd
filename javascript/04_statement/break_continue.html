@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>break &amp; continue</h1>
+  <p>break: 자기가 소속된 반복문 블록을 빠져나간다.</p>
+  <p>continue: 자기보다 아래쪽 명령문을 실행하지 않고 해당 반복문의 다음 차례로 진행한다.</p>
+
+  <script>
+    for(let i = 0; i < 10; i++) {
+      if(i == 7){
+        break;
+      }
+      console.log(i);
+    }
+    console.log("-----------------");
+
+
+    for(let i = 0; i < 10; i++) {
+      if(i == 7){
+        continue;
+      }
+      console.log(i);
+    }
+    console.log("-----------------");
+
+    for(let i = 2; i <= 9; i++){
+      for(let j = 1; j <= 9; j++){
+        if(j == 4){
+          continue;
+        }
+        console.log(`${i} x ${j} = ${i*j}`);
+      }
+      console.log("------------");
+    }
+
+
+    let i = 1;
+    while(true){
+      if(i == 100){
+        break;
+      }
+      if(i % 2 ==0){
+        i++;
+        continue;
+      }
+
+      console.log(i);
+      i++;
+    }
+
+  </script>
+</body>
+</html>

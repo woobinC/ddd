@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>구구단 출력</h1>
+
+  <script>
+    // let num = parseInt(prompt("구구단 몇단을 출력 할까요"));
+
+    // if (num < 2 || num > 9 || isNaN(num)) {
+    //   alert("2~9 사이의 숫자만 입력하세요");
+    // } else {
+    //   for (let i = 1; i <= 9; i++) {
+    //     document.write(`<p> ${num} * ${i} = ${num * i} `);
+    //   }
+    // }
+
+    let num;
+    do{
+      num = parseInt(prompt("구구단 몇단을 출력 할까요"));
+    }while(num < 2 || num > 9 || isNaN(num));
+
+    for (let i = 1; i <= 9; i++) {
+      document.write(`<p> ${num} * ${i} = ${num * i} `);
+    }
+  </script>
+</body>
+
+</html>
