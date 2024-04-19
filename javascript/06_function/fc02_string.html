@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>배열 [1, 2, 3, 4, 5]의 모든 요소를 역순으로 출력하는 코드를 작성하세요.</li>
+    <script>
+      const arr = [1, 2, 3, 4, 5];
+      for(i = arr.length-1 ; i >= 0; i--) {
+        console.log(arr[i]);
+      }
+      console.log("-------------");
+    </script>
+
+    <li>주어진 배열에서 최댓값을 찾는 함수를 작성하세요.</li>
+    <script>
+      function findMax(arr){
+        // return Math.max(...arr);
+      let max = arr[0];
+      console.log(max);
+      for(let i in arr){
+        if(max < arr[i]){
+          max = arr[i];
+        }
+      }
+      return max;
+    }
+      console.log(findMax(arr));
+      console.log("-------------");
+    </script>
+    <li>주어진 배열에서 홀수 값만을 가진 새로운 배열을 만드는 코드를 작성하세요.</li>
+    <script>
+      // const arr2 = arr.filter(x => x % 2 !== 0);
+      // console.log(arr2);
+
+      let arr2 = new Array();
+      for(i = 0; i <= arr.length; i++) {
+        if (arr[i] % 2 != 0) {
+          arr2.push(arr[i]);
+        }
+        }
+        console.log(arr2);
+        console.log("-------------");
+      
+    </script>
+
+    <li>두 개의 배열을 합치는 함수를 작성하세요.</li>
+    <script>
+      console.log(arr.concat(arr2));
+    </script>
+    <li>주어진 배열을 오름차순으로 정렬하는 코드를 작성하세요.</li>
+    
+    <li>주어진 배열에서 중복된 값을 제거하는 코드를 작성하세요.</li>
+    <li>주어진 배열에서 모든 요소의 합을 구하는 함수를 작성하세요.</li>
+    <li>배열 [1, 2, 3, 4, 5]에서 각 요소를 제곱한 새로운 배열을 만드는 코드를 작성하세요.</li>
+    <li>>주어진 배열에서 홀수와 짝수를 구분하여 두 개의 서로 다른 배열로 나누는 코드를 작성하세요.</li>
+    <li>>주어진 배열에서 특정 값의 인덱스를 찾는 함수를 작성하세요.</li>
+  </ul>
+
+
+
+</body>
+
+</html>

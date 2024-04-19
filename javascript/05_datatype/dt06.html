@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>array sort()</h1>
+  <p>정렬 - array 자체를 변경한다</p>
+
+  <script>
+    const fruits = ["kiwi", "apple", "strawberry", "melon", "orange"];
+    console.log(fruits);
+
+    //sort(): 오름차순 정렬
+    // fruits.sort();
+    // console.log(fruits);
+
+    // 내림차순 정렬 - sort -> reverse()
+    fruits.sort();
+    fruits.reverse();
+    console.log(fruits);
+
+    const nums = [33, 1, 56, 28, 182, 31, 65];
+    console.log(nums);
+
+    // 숫자 array에서는 sort 안 됨.
+    // nums.sort();
+    // console.log(nums);
+
+    // nums.sort(function(left, right){
+    //   return left - right;
+    // });
+    const num_sort = function(left, right) {
+      return left - right;
+    }
+    nums.sort(num_sort);
+    console.log(nums);
+  </script>
+
+</body>
+
+</html>

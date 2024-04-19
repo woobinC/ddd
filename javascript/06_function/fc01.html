@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  console.log("wow1");
+  function tt() {
+    console.log("wow3");
+  }
+
+  window.onload = function init() {
+    document.getElementById("main").innerHTML = "집에 가고싶어"
+  }
+
+  window.ondblclick = function() {
+    for(let i = 0; i < 10; i++) {
+      hi(i);
+    }
+  }
+
+</script>
+
+<body>
+  <h1 id="main">자바 스크립트 함수</h1>
+  <p>원하는 순간, 원하는 이벤트에 따라 특정한 기능을 실행하기 위해 사용</p>
+  <p>특정한 기능을 반복적으로 사용하기 위해 작성</p>
+  <p>일반 스크립트는 DOM 로딩 순서에 따라 실행되지만 함수는 호출되는 순간 실행된다.</p>
+  <button type="button" onclick="hi('my friend')">인사합시다!!!</button>
+
+  <script>
+    console.log("wow2");
+    tt();
+    function hi(x) {
+      console.log("hi! - " + x);
+    }
+  </script>
+</body>
+
+</html>

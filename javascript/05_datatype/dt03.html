@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Array: 여러 타입의 데이터를 묶어서 보관할 수 있는 객체</h1>
+
+  <div id="lucky"></div>
+  <script>
+    let num1 = 3;
+    let num2 = 5;
+    let num3 = 7;
+
+    const MyLuckyNums = new Array(3); // 3칸짜리 데이터 저장소 생성
+    MyLuckyNums[0] = 3;
+    MyLuckyNums[1] = 5;
+    MyLuckyNums[2] = 7;
+
+    console.log(MyLuckyNums);
+    console.log("MyLuckyNums : ", MyLuckyNums);
+    console.log("MyLuckyNums : " + MyLuckyNums);
+    console.log(MyLuckyNums[1]);
+    console.log(MyLuckyNums[2]);
+
+    MyLuckyNums[3] = 8;
+    console.log(MyLuckyNums[3]);
+    MyLuckyNums[0] = 1;
+    console.log("MyLuckyNums : ", MyLuckyNums);
+    console.log("MyLuckyNums.length : ", MyLuckyNums.length);
+
+    let result = "";
+    for(let i = 0; i < MyLuckyNums.length; i++) {
+      result += `<p>행운의 숫자 ${i+1}번 ${MyLuckyNums[i]}</p>`;
+    }
+    document.getElementById("lucky").innerHTML = result;
+
+    const a = Array(5);
+    a[0] = 11;
+    a[1] = 22;
+    a[2] = 33;
+    a[3] = 44;
+    a[4] = 55;
+
+    for(let i = 0; i < a.length; i++) {
+      a[i] = i+1;
+    }
+    console.log("a : ", a);
+
+    let sum = 0;
+    for(let i = 0; i < a.length; i++) {
+      console.log(a[i]);
+      if(a[i] % 2 !=0) {
+        sum += i;
+      }
+    }
+    
+    console.log("array의 a에 들어있는 홀수의 합: " + sum);
+    console.log("---------------");
+    const days = ["yestarday", "today", "tomorrow"];
+    const arr = ["dream", 77, true, "party"];
+    console.log(days);
+    console.log(arr);
+
+    for( let i = 0; i < days.length; i++) {
+      console.log(days[i]);
+      if(days[i] == "today"){
+        console.log("i love ul");
+      }else{
+        console.log("i hate ul");
+      }
+    }
+    //array + array
+    const c = days + arr;
+    console.log(c);
+    console.log(typeof c);
+
+    
+  </script>
+</body>
+</html>
