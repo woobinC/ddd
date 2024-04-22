@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>My Friends</h1>
+  <div id="friends"></div>
+  <script>
+    //object 생성을 위한 틀 - class
+
+    function Person(firstName, lastName, id) {
+      //property(attribue)
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.id = id;
+
+      //function(기능 수행)
+      this.fullname = function() {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+
+    let mary = new Person("jane", "mary", 2345);
+    let tom = new Person("mogly", "tom", 1452);
+
+    console.log(mary);
+    console.log(tom);
+
+    //json : javascript object notation
+    let steve = {firstName: "jobs", lastName: "steve", id: 7777};
+    console.log(steve);
+    console.log("-------------")
+    console.log(mary.fullname());
+    console.log(tom.fullname());
+
+    const friends = [mary, tom, steve];
+
+    for(let idx in friends){
+      console.log(friends[idx]);
+      console.log("----------")
+    }
+  </script>
+</body>
+</html>

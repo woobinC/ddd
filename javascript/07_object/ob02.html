@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>학생 목록</h1>
+
+  <script>
+    // function Student(name , age , school){
+    //     //학생의 프로퍼티(속성 , 값) - 학생이 공통적으로 가지는 특징
+    //     this.name = name,
+    //     this.age = age,
+    //     this.school = school;
+
+    //     //기능(행동):
+    //     this.study = function(subject){
+    //         console.log(this.name+ "" + subject + "를 죽어라 공부합니다!!!");
+    //     }
+    // }
+
+    // object 찍어내기 위한 function -> class
+
+    class Person {
+      constructor(name, age) {
+        this.name = name,
+          this.age = age;
+      }
+    }
+
+    //Person 클래스를 상속
+    class Student extends Person {
+      constructor(name, age, school) {
+        super(name, age);
+        this.school = school;
+      }
+
+      study(subject) {
+        console.log(this.name + "가" + subject + "를 죽어라 공부합니다!!!");
+
+      }
+    }
+
+    let s1 = new Student('aa', 11, 'gogo');
+    let s2 = new Student('bb', 22, 'toto');
+    let s3 = new Student('cc', 33, 'soso');
+
+    let s4 = { name: 'gg', age: 99, school: 'wkwk' };
+    console.log(s1);
+    console.log(s2);
+    console.log(s3);
+    console.log(s4);
+
+    console.log(s1.study("국어"));
+    console.log(s2.study("영어"));
+    // object 찍어내기 위한 function -> class
+
+    const Students = [s1, s2, s3, s4];
+    console.log(Students);
+    for (let i in Students) {
+      console.log(Students[i]); //첫번째 학생 오브젝트 꺼냄
+
+      //각 학생 오브젝트에서 속성값 추출 출력
+      for(let prop in Students[i]) {
+        document.write(`<p>name: ${Students[i][prop]} </p>`)
+      }
+      document.write("<hr>");
+    }
+  </script>
+</body>
+
+</html>

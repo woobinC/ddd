@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="friends"></div>
+
+  <script>
+    function Friend(name, age, pet) {
+      this.name = name;
+      this.age = age;
+      this.pet = pet;
+    }
+
+    let f1 = new Friend("tom", 11, "cat");
+    let f2 = new Friend("jane", 22, "dog");
+    let f3 = new Friend("steve", 33, "bird");
+
+    const friends = [f1, f2, f3];
+    let x = "";
+
+    for(let i in friends) {
+      for(let k in friends[i]) {
+        x += k + " : " + friends[i][k] + "<br>";
+      }
+      x += "<hr>";
+    }
+    document.getElementById("friends").innerHTML = x;
+    
+    console.log(friends);
+
+    var p1 = {
+      "name": "tom",
+      "age": 33,
+      "pet": [
+        { "kind": "dog", "name": ["thunder", "sky", "merry"] },
+        { "kind": "cat", "name": ["sally", "terry", "molly"] },
+        { "kind": "bird", "name": ["gori", "pori"] }
+      ]
+    };
+
+    console.log(p1);
+
+
+
+  </script>
+</body>
+
+</html>

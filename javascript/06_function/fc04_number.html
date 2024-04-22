@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let num = 12345.45678;
+    let num_str = "12345.45678";
+
+    console.log(num.toString() + 999);
+    console.log(Number(num_str) + 999);
+    console.log(parseInt(num_str) + 999);
+    console.log(parseFloat(num_str) + 999);
+
+    //소수점 자리수 - 반올림
+    console.log(num.toFixed());
+    console.log(num.toFixed(3)); 
+
+    console.log(num.toExponential(7)); 
+    console.log(num.toPrecision(7)); 
+    
+    console.log(num.toLocaleString("kr-KR")); 
+    console.log(num.toLocaleString("de-DE")); 
+    console.log(num.toLocaleString("us-US")); 
+  </script>
+</body>
+</html>

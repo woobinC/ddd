@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let str = "우리는 친구 만나면 반가운 친구";
+    let words = str.split(" ");
+    for (let idx in words) {
+      document.write("<p>" + idx + " : " + words[idx] + " 배고파</p>");
+    }
+
+    let new_str = words.join("_");
+    document.write("<p>" + new_str + "</p>");
+
+    let f = "  친구 ";
+    document.write("<p>" + str.includes(f.trim()) + "</p>");
+    document.write("<p>" + str.includes(f.trim()) >= 0 + "</p>");
+
+    //template literal - back tick - 변수, 표현식 ${}
+    var sentence = 'The quick brown fox jumped Over The Lazy Dog.';
+
+    let word = "lion";
+
+    document.write(`<p>Thr word "${word}"이라는 단어는 이 문장에 포함되어 ${sentence.includes(word) ? "있다" : "있지않다"} </p>`);
+
+    //match() - regexp과 매칭되는 어구를 array로 반환
+    let regex = /[A-Z]/g; //영문 대문자
+    let find = sentence.match(regex);
+    console.log(find);
+
+    //search - regexp과 매칭되는 어구의 첫 인덱스 반환
+    let regex2 = /[^\w\s]/g;
+    console.log(sentence.search(regex2));
+    console.log(sentence.length);
+    console.log(sentence.substr(sentence.length-4, 3));
+
+    if(sentence.endsWith(".")){
+      alert("wow");
+    }else{
+      alert("ㅠㅠ");
+    }
+
+  </script>
+</body>
+
+</html>

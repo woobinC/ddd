@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>location</h1>
+  <button type="button" onclick="gogo('http://www.daum.net')"> Daum </button>
+  <button type="button" onclick="gogo('http://www.naver.com')"> Naver </button>
+
+  <script>
+    document.write("<hr>");
+    document.write(location.host);
+    document.write("<hr>");
+    document.write(location.hostname);
+    document.write("<hr>");
+    document.write(location.pathname);
+    document.write("<hr>");
+    document.write(location.hash);
+    document.write("<hr>");
+    document.write(location.origin);
+    document.write("<hr>");
+
+    function gogo(url) {
+      // location.href = url;
+      location.assign(url);
+
+      history.back();
+    }
+  </script>
+</body>
+
+</html>

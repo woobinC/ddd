@@ -8,62 +8,109 @@
 </head>
 
 <body>
+  <h1>string function</h1>
+
   <ul>
-    <li>배열 [1, 2, 3, 4, 5]의 모든 요소를 역순으로 출력하는 코드를 작성하세요.</li>
-    <script>
-      const arr = [1, 2, 3, 4, 5];
-      for(i = arr.length-1 ; i >= 0; i--) {
-        console.log(arr[i]);
-      }
-      console.log("-------------");
-    </script>
-
-    <li>주어진 배열에서 최댓값을 찾는 함수를 작성하세요.</li>
-    <script>
-      function findMax(arr){
-        // return Math.max(...arr);
-      let max = arr[0];
-      console.log(max);
-      for(let i in arr){
-        if(max < arr[i]){
-          max = arr[i];
-        }
-      }
-      return max;
-    }
-      console.log(findMax(arr));
-      console.log("-------------");
-    </script>
-    <li>주어진 배열에서 홀수 값만을 가진 새로운 배열을 만드는 코드를 작성하세요.</li>
-    <script>
-      // const arr2 = arr.filter(x => x % 2 !== 0);
-      // console.log(arr2);
-
-      let arr2 = new Array();
-      for(i = 0; i <= arr.length; i++) {
-        if (arr[i] % 2 != 0) {
-          arr2.push(arr[i]);
-        }
-        }
-        console.log(arr2);
-        console.log("-------------");
-      
-    </script>
-
-    <li>두 개의 배열을 합치는 함수를 작성하세요.</li>
-    <script>
-      console.log(arr.concat(arr2));
-    </script>
-    <li>주어진 배열을 오름차순으로 정렬하는 코드를 작성하세요.</li>
-    
-    <li>주어진 배열에서 중복된 값을 제거하는 코드를 작성하세요.</li>
-    <li>주어진 배열에서 모든 요소의 합을 구하는 함수를 작성하세요.</li>
-    <li>배열 [1, 2, 3, 4, 5]에서 각 요소를 제곱한 새로운 배열을 만드는 코드를 작성하세요.</li>
-    <li>>주어진 배열에서 홀수와 짝수를 구분하여 두 개의 서로 다른 배열로 나누는 코드를 작성하세요.</li>
-    <li>>주어진 배열에서 특정 값의 인덱스를 찾는 함수를 작성하세요.</li>
+    <li></li>
   </ul>
 
+  <script>
+    // string은 기본적으로 array다 - string에 index, length가 있다는 의미
+    let str = "time to go home";
+    let ko_str = "집에 갈 시간이네";
 
+    console.log(str.length);
+    console.log(ko_str.length);
+    console.log(str[0]);
+    console.log(ko_str[0]);
+
+    let a = str.toUpperCase(); //원본을 수정하지 않고 효과 적용한 문자열 반환
+    console.log(a);
+    console.log("------------------");
+    let b = a.toLowerCase();
+    console.log(b);
+    console.log("------------------");
+    //substr(처음값, 길이): 문자열 일부 잘라서 변환
+    var c = a.substr(2, 5);
+    console.log(c);
+    console.log("------------------");
+    //substring(처음값, 끝값) - 끝값은 미포함
+    var d = a.substring(2, 10);
+    console.log(d);
+    console.log("------------------");
+    //concat() - 문자열 합치기
+    let e = b.concat(" now");
+    console.log(e);
+    console.log("------------------");
+    //charAt() - 특정 index의 문자 반환
+    let f = b.charAt(3); //b[3]와 동일
+    console.log(f);
+    console.log("------------------");
+    //index 추출
+    let g = b.indexOf("o");
+    console.log(g);
+    console.log("------------------");
+    let h = b.lastIndexOf("o");
+    console.log(h);
+    console.log("------------------");
+    //replace() - 문자열 바꾸기
+    let i = b.replace("home", "to bed");
+    console.log(i);
+    console.log("------------------");
+
+    //정규식(reguler expression) 이용해서 모두 바꾸기
+    //g: 패턴에 대한 전역 검색
+    //i: 대/소문자 구분 안함
+    //m: 여러 줄 검색
+    let j = i.replace(/t/gi, "why ");
+    // let j = i.replace("t", "why "); //첫 번째만 변경
+    console.log(j);
+    console.log("------------------");
+
+    var k = "대한민국은 3.1 운동을 통해 독립을 선언하고, 1919년 4월 11일 임시정부 수립하며 시작되었다. 1945년 광복 이후, 한반도의 북위 38도선 이남 지역 거주자들의 자유로운 선거(5.10 총선거)를 통하여 1948년 8월 15일에 공식적인 민주주의 국가로 출범하였다. 대한민국 헌법 전문에 따르면 대한국민은 3.1운동으로 건립된 대한민국 임시 정부의 법통을 계승한다. 대한민국은 1948년 12월 유엔 총회 결의 제195호를 통해 유엔으로부터 한반도 대다수 주민의 자유로운 의사에 따라 탄생한 한반도 유일한 정부로서 합법 정부로 승인 받았다. 이와 관련하여 대한민국 정부가 1948년에 유엔 감시 하에 선거를 실시한 한반도 이남에서만 유일한 합법 정부라는 주장도 있다.[5] 1991년 대한민국과 조선민주주의인민공화국은 동시에 UN에 가입하였다. 한편 국제법 상의 관례와 통설[6], 대한민국의 헌법재판소의 판례에 따르면 조선민주주의인민공화국이 UN에 가입하였다 하여 가맹국들 상호 간에도 당연히 그 국가성이 승인되는 것은 아니고 또 그러한 의무가 있는 것이 아니다. [7] 대한민국은 조선민주주의인민공화국의 국가성을 원칙적으로 부정한다.[8]"
+
+    let l = k.replace(/대한민국/gm, "미국");
+    console.log(l);
+
+    //trim()
+    let m = "    민주주의     ";
+    console.log(m.trim());
+    let id = "   ace   "
+    if(id.trim() == "ace") {
+      console.log("same");
+    }else{
+      console.log("not same")
+    }
+
+    if(k.indexOf(m.trim()) >= 0){
+      console.log(k.indexOf(m.trim()) + "에 있네");
+    }else{
+      console.log("그런 단어 없어");
+    }
+
+    //split: 특정 구분자를 기준으로 문자열을 단어로 잘라 array로 반환
+    let w_arr = b.split(" ");
+    console.log(w_arr);
+
+    function wordCount(script, word){
+      let arr = script.split(" ");
+      let cnt = 0;
+      for(let w in arr){
+        // if(arr[w].trim() == word){
+        //   cnt++;
+        // }
+        if(arr[w].indexOf(word) >= 0) {
+          console.log(arr[w]);
+          cnt++;
+        }
+      }
+      console.log(word + " 포함 갯수 = " + cnt);
+    }
+
+    wordCount(k, "대한민국");
+
+
+  </script>
 
 </body>
 

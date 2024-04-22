@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    var p1 = {
+      "name": "tom",
+      "age": 33,
+      "pet": [
+        { "kind": "dog", "name": ["thunder", "sky", "merry"] },
+        { "kind": "cat", "name": ["sally", "terry", "molly"] },
+        { "kind": "bird", "name": ["gori", "pori"] }
+      ]
+    };
+
+    console.log(p1);
+
+    let x = "<h1>" + p1.name + "'s pats" + "<br>"
+    + "age : " + p1.age + "</h1>";
+
+    for (let i in p1.pet) {
+      console.log(p1.pet[i]);
+      for (let k in p1.pet[i]) {
+        if(k == "kind"){
+          x += "<h3>" + k + " : " + p1.pet[i][k] + "</h3>";
+        }else {
+          x += "<h3>" + k + "</h3>";
+          for(let n in p1.pet[i][k]){
+            x += "<p>" + p1.pet[i][k][n] + "</p>";
+          }
+        }
+        
+      }
+      x += "<hr>";
+    }
+    document.write(x);
+  </script>
+</body>
+
+</html>
