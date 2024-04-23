@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>파일 업로드</h1>
+  <form action="">
+    <input type="file" id="file" onchange="previewfile()">
+    <hr>
+    <img src="" alt="" width="200">
+  </form>
+
+  <script>
+
+    function previewfile() {
+      let file = document.querySelector('input[type=file]').files[0];
+      console.log(file);
+      let preview = document.query5Selector('img');
+      console.log(preview);
+
+      var reader = new FileReader();
+
+      reader.addEventListener("load", function () {
+        preview.src = reader.result;
+      }, false);
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+</body>
+
+</html>

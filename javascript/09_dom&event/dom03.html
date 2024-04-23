@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="" name="frm" id="myform">
+    <input type="button" onclick="check()" value="send">
+  </form>
+
+  <div>
+    <img src="" alt="city" name="a1">
+    <img src="" alt="nature" name="a2">
+    <img src="" alt="universe" name="a3">
+  </div>
+
+  <script>
+    let frm = document.getElementById("myform");
+
+    console.log(frm);
+
+    function check() {
+      // frm.action = "http://localhost";
+      // frm.submit();
+    }
+
+    // let imgs = document.getElementsByTagName("img");
+    let imgs = document.images;
+
+    console.log(imgs);
+    console.log(imgs[0].alt);
+    console.log(document.images[1].alt);
+    console.log(a1.alt);
+
+    for(let i = 0; i < imgs.length; i++){
+      imgs[i].src = "/images/" + i + ".jpg";
+    }
+  </script>
+</body>
+
+</html>

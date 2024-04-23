@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>DOM을 활용한 element 선택 방법</h1>
+  <ul>
+    <li>getElementById(''): id로 선택 - 개별 element 선택</li>
+    <li>getElementsByTagName: 같은 tag elements를 배열로 반환</li>
+    <li>getElementsByClassName: 같은 class 이름을 가진 elements를 배열로 반환</li>
+    <li>getElementsByName: 같은 name을 가진 elements를 배열로 반환</li>
+    <li>querySelector(""): CSS 방식으로 선택한다. 해당되는 첫 번째 element 하나 반환</li>
+    <li>querySelectorAll: CSS 방식으로 선택한다. 해당되는 모든 elements를 배열로 반환</li>
+  </ul>
+
+  <p class="greet">hi! <span>wow1</span></p>
+  <p class="greet">hello! <span>wow2</span></p>
+  <p id="season" name="wow">summer <span>wow3</span></p>
+
+  <div id="result" name="wow">오늘은 <span>소주</span> 한잔 어때</div>
+
+  <script>
+    let a = document.getElementById("result");
+    console.log(a);
+    console.log(a.innerHTML);
+    console.log(a.textContent);
+    console.log(a.childNodes[1]);
+    console.log(a.childNodes[1].textContent);
+    console.log(a.children);
+    console.log(a.tagName);
+
+    //tagname으로 선택
+    let b = document.getElementsByTagName("div");
+    console.log(b);
+    console.log(b[0].innerHTML);
+    let c = document.getElementsByTagName("p");
+    console.log(c);
+
+    // class로 선택
+    let d = document.getElementsByClassName("greet");
+    console.log(d);
+    console.log(d[1].childNodes[0].textContent);
+
+    // name으로 선택, CSS 변경
+    let e = document.getElementsByName("wow");
+    console.log(e);
+    e[1].style.backgroundColor = "pink";
+    e[1].style.padding = "10px";
+    e[1].addEventListener("mouseover", changeColor);
+    e[1].addEventListener("mouseleave", changeColor1);
+    e[1].addEventListener("click", changeColor2);
+
+    function changeColor() {
+      this.style.color = "green";
+    }
+    function changeColor1() {
+      this.style.color = "black";
+    }
+    function changeColor2() {
+      let g = document.querySelectorAll("p span");
+      for(let i = 0; i < g.length; i++) {
+        g[i].style.backgroundColor = "green";
+      }
+    }
+
+    //query로 선택
+    let f = document.querySelector("p span");
+    console.log(f);
+    let g = document.querySelectorAll("p span");
+    console.log(g);
+
+  </script>
+</body>
+
+</html>

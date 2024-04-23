@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>onsearch &amp; onkeyup</h1>
+  <p>검색: <input type="search" id="myInput" onsearch="myFunc()" onkeyup="copy()"></p>
+  <p id="result"></p>
+  <p id="yourInput"></p>
+
+  <script>
+    
+    let s = document.querySelector("#myInput");
+    let t = document.querySelector("#result");
+    let r = document.querySelector("#yourInput");
+
+    function myFunc() {
+      t.innerHTML = "지금 " + s.value + "를 찾고 있군, 위험해";
+    }
+
+    function copy() {
+      r.innerHTML = s.value;
+    }
+  </script>
+</body>
+
+</html>

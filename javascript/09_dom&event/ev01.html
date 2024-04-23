@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>onclick - change image</h1>
+  <img src="/images/0.jpg" alt="" name="fruit">
+  <hr>
+  <button type="button" onclick="changeImage(5)">파인애플</button>
+  <button type="button" onclick="changeImage(6)">체리</button>
+  <button type="button" onclick="changeImage(7)">수박</button>
+
+  <script>
+    let path = "/images/";
+    let extension = ".jpg";
+
+    function changeImage(num) {
+      fruit.src = path + num + extension;
+    }
+  </script>
+</body>
+</html>

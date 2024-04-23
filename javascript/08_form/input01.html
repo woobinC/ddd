@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>form Validation</h1>
+  <h2>로그인</h2>
+
+  <!-- <form action="" method="post" name="frm" onsubmit="return check()"> -->
+  <form action="" method="post" name="frm">
+    id: <input type="text" name="id" id="id"> <br>
+    pw: <input type="password" name="password" id="password"> <br>
+    <!-- <input type="submit"> <br> -->
+    <button type="button" onclick="check()">로그인</button>
+  </form>
+
+  <script>
+    console.log(document.frm);
+    console.log(document.forms[0]);
+
+    const check = function (){
+      if(frm.id.value == "" || frm.id.value == null) {
+        alert("아이디를 쓰세요");
+        frm.id.focus();
+        return;
+      }
+      if(frm.password.value == "" || frm.password.value == null) {
+        alert("비밀번호를 쓰세요");
+        frm.password.focus();
+        return;
+      }
+      frm.submit();
+
+    }
+  </script>
+</body>
+</html>

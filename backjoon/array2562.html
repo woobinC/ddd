@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let result = [3, 29, 38, 12, 57, 74, 40, 85, 61];
+    let num = 0;
+    for(let i=0;i<result.length;i++){
+      if(result[i]>result[num]){
+        num=i;
+      }
+    }
+    console.log(num+1 + " " + result[num]);
+    for(let i in result) {
+    console.log(result[i]);
+      if(result[i]> result[i-1]){
+        num = result[i];
+      }
+      
+    }
+    console.log(num);
+
+    for(let i in result) {
+      if(result[i] == num) {
+        console.log(i*1 +1);
+      }
+    }
+
+  </script>
+</body>
+</html>

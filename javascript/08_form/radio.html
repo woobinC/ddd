@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>* 다음에서 선택하세요</h2>
+  <form action="" name="frm">
+    1. 가장 좋아하는 영화 한 개만을 선택하세요.
+    <br>
+
+    <input type="radio" name="movie" id="m1" value="인디아나 존스" checked="checked"> <label for="m1">인디아나 존스</label>
+    <input type="radio" name="movie" id="m2" value="해리 포터"><label for="m2">해리 포터</label>
+    <input type="radio" name="movie" id="m3" value="쿵후 펜더"><label for="m3">쿵후 펜더</label>
+    <hr>
+
+    <br>
+    2. 좋아하는 노래를 선택하세요.
+    <br>
+    <input type="radio" name="song" id="m4" value="세월이 가면" checked="checked"> <label for="m4">세월이 가면</label>
+    <input type="radio" name="song" id="m5" value="붉은 노을"> <label for="m5">붉은 노을</label>
+    <input type="radio" name="song" id="m6" value="희망 사항"> <label for="m6">희망 사항</label>
+    <input type="radio" name="song" id="m7" value=" 신데렐라"><label for="m7">신데렐라</label>
+    <hr>
+    <br>
+    <input type="button" value="내가 뭘 좋아하지?" onclick="chk()">
+  </form>
+
+  <h2>내가 좋아하는 영화는: <span id="cinema"></span></h2>
+  <h2>내가 좋아하는 노래는: <span id="music"></span></h2>
+
+  <script>
+    function chk() {
+      console.log(frm.movie);
+      for(let i in frm.movie) {
+        if(frm.movie[i].checked) {
+          document.getElementById("cinema").innerHTML = frm.movie.value;
+          break;
+        }
+      }
+
+      for(let j in frm.song) {
+        if(frm.song[j].checked) {
+          document.getElementById("music").innerHTML = frm.song.value;
+          break;
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

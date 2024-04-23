@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>좋아하는 노래를 선택하세요</h2>
+  <form action="" name="frm">
+    <select name="song" id="" multiple size="2">
+      <option value="세월이 가면">세월이 가면</option>
+      <option value="붉은 노을">붉은 노을</option>
+      <option value="희망 사항">희망 사항</option>
+      <option value="신데렐라">신데렐라</option>
+    </select>
+    <hr>
+    <br>
+    <input type="button" value="내가 무슨 노래를 좋아하지?" onclick="chk()">
+  </form>
+
+  <div>
+    <p>내가 좋아하는 노래는</p>
+    <ul id="song">
+
+    </ul>
+  </div>
+
+  <script>
+    
+    function chk() {
+      let str = "";
+      for(let i = 0; i < frm.song.length; i++){
+        if(frm.song[i].selected){
+        str += `<li> ${frm.song[i].value} </li>`;
+        }
+      }
+      document.getElementById("song").innerHTML = str;
+    }
+    
+  </script>
+</body>
+
+</html>

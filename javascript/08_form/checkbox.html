@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>좋아하는 노래를 선택하세요</h2>
+  <form action="" name="frm">
+    <input type="checkbox" name="song" id="m4" value="세월이 가면" checked="checked"> <label for="m4">세월이 가면</label>
+    <input type="checkbox" name="song" id="m5" value="붉은 노을"> <label for="m5">붉은 노을</label>
+    <input type="checkbox" name="song" id="m6" value="희망 사항"> <label for="m6">희망 사항</label>
+    <input type="checkbox" name="song" id="m7" value=" 신데렐라"><label for="m7">신데렐라</label>
+    <hr>
+    <br>
+    <input type="button" value="내가 뭘 좋아하지?" onclick="chk()">
+
+  </form>
+
+  <div id="music"></div>
+
+  <script>
+
+    function chk() {
+      let str = "내가 좋아하는 노래는 ";
+      for(let i = 0 ; i < frm.song.length; i++) {
+        if(frm.song[i].checked) {
+          str += frm.song[i].value;
+        }
+      }
+      document.getElementById("music").innerHTML = str;
+    }
+  </script>
+</body>
+
+</html>
