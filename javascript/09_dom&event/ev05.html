@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="checksize()">
+    <h1>Window - resize</h1>
+
+    <p id="size"></p>
+
+    <script>
+        function checksize(){
+            let w = window.outerWidth;
+            let h = window.outerHeight;
+            document.querySelector("#size").innerHTML = `window size : width: ${w} / height: ${h}`;
+        }
+    </script>
+</body>
+</html>

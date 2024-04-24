@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+        background-color: indianred;
+        width: 400px;
+        /*            height: 100px;*/
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        line-height: 100px;
+        margin: auto;
+    }
+
+    button {
+        padding: 10px;
+        flex: auto;
+        margin: 2px;
+    }
+
+    #btn {
+        display: flex;
+        margin: auto;
+        width: 220px;
+        /*            border: 1px solid red;*/
+    }
+</style>
+</head>
+<body>
+  <h1 id="now">watch</h1>
+  <div id="btn">
+  <button onclick="start()">start</button>
+  <button onclick="stop()">stop</button>
+</div>
+
+<script>
+  let time ;
+  let start_btn = document.getElementsByTagName("button")[0];
+  let stop_btn = document.getElementsByTagName("button")[1];
+
+  function start() {
+    start_btn.disabled = true;
+
+    time = setInterval(function(){
+      let date = new Date();
+      let hour = date.getHours();
+      hour = hour < 10? "0"+hour : hour;
+      let min = date.getMinutes();
+      min = min < 10? "0"+min : min;
+      let sec = date.getSeconds();
+      sec = sec < 10? "0"+sec : sec;
+
+      document.querySelector("#now").innerHTML = `${hour}:${min}:${sec}`;
+    }, 1);
+  }
+
+  function stop() {
+    clearInterval(time);
+    start_btn.disabled = false;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      position: relative;
+    }
+
+    #box {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(255, 0, 0);
+    }
+
+    button {
+      display: inline-block;
+      padding: 10px;
+      width: 97px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Animation</h1>
+
+  <div id="container">
+    <div id="box"></div>
+  </div>
+  <button onclick="move()" id="move">move</button>
+  <button onclick="stop()" id="stop">stop</button>
+
+  <script>
+    let position, time;
+    let box = document.getElementById("box");
+    let move_btn = document.getElementById("move");
+
+    function move() {
+      move_btn.disabled = true;
+      clearInterval(time);
+      position = 0;
+      time = setInterval(rightmove, 10);
+      time = setInterval(downmove, 10);
+      time = setInterval(leftmove, 10);
+      time = setInterval(upmove, 10);
+    }
+
+    function rightmove() {
+      if (position == 150) {
+        clearInterval(time);
+        time = setInterval(downmove, 10);
+      } else {
+        position++;
+        box.style.left = position + "px";
+      }
+    }
+    function downmove() {
+      if (position == 150) {
+        clearInterval(time);
+      } else {
+        position++;
+        box.style.bottom = position + "px";
+      }
+    }
+    function leftmove() {
+      if (position == 150) {
+        clearInterval(time);
+      } else {
+        position++;
+        box.style.left = position + "px";
+      }
+    }
+    function upmove() {
+      if (position == 150) {
+        clearInterval(time);
+      } else {
+        position++;
+        box.style.top = position + "px";
+      }
+    }
+
+  </script>
+</body>
+
+</html>

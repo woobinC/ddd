@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      float: left;
+      width: 100px;
+      height: 35px;
+      margin: 15px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+
+    }
+
+    #result {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <p ondragstart="dragStart(event)" draggable="true" id="우리나라 만세">Drag me!</p>
+  </div>
+
+
+  <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+  <p id="result"></p>
+
+  <script>
+    function dragStart(event) {
+      console.log(event);
+      event.dataTransfer.setData("Text", event.target.id);
+      document.getElementById("result").innerHTML = "p element 잡아서 끌고 있네"
+    }
+
+    function allowDrop() {
+      event.preventDefault();
+    }
+
+    function drop(event) {
+      event.preventDefault();
+      var data = event.dataTransfer.getData("Text");
+
+      alert(data);//dragtarget
+      //document.getElementById(data) : p tag 자체
+      event.target.appendChild(document.getElementById(data));
+      document.getElementById("result").innerHTML
+        = "p 요소가 새 둥지를 찾았어요.";
+    }
+  </script>
+</body>
+
+</html>

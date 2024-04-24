@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            flex: auto;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            display: inline-block;
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+
+        div {
+            max-width: 500px;
+            display: flex;
+            margin: auto;
+            width: auto;
+            /*            border: 1px solid red;*/
+        }
+
+        button {
+            padding: 10px;
+            flex: auto;
+            margin: 2px;
+        }
+        
+        #result{
+            margin: 20px;
+            padding: 10px;
+            font-size: 40px;
+            color: gold;
+            text-align: center;
+            text-shadow: 1px 1px 2px violet, 0 0 25px blue, 0 0 5px darkblue;
+            
+        }
+        p{  
+            flex: 1 ;
+            width: 100px;
+            margin: 20px;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+            color:white;
+            background-color: teal;
+            margin: 20px;
+            
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <img src="../../images/0.jpg" alt="" name="ban0">
+        <img src="../../images/0.jpg" alt="" name="ban1">
+        <img src="../../images/0.jpg" alt="" name="ban2">
+    </div>
+
+    <div>
+        <button onclick="select()">MY PICK</button>
+        <button onclick="start()">Start Again</button>
+    </div>
+    
+    <div id="result"></div>
+    <div id="balance"></div>
+
+    <script>
+        var banner = new Array();
+        var changeImg;
+        var ran = 0;
+//        var img = document.getElementsByTagName("img");
+
+        for (var i = 0; i < 7; i++) {
+            banner[i] = "../../images/" + i + ".jpg";
+        }
+        
+        function person(name, money){
+            this.name=name; 
+            this.money = money;
+        }
+        
+        var p1=new person("tom", 1000);
+        
+        var p2=new person("Casino", 10000);
+        
+        var ran1, ran2, ran3;
+        var result = document.getElementById("result");
+        var balance = document.getElementById("balance");
+        function start() {
+            result.innerHTML="dododododo...."
+            changeImg = setInterval(function() {
+//                                if (ran>=6)
+//                                    ran=0;
+//                                else
+//                                    ran++;
+//            self.ban0.src= banner[ran];
+                
+               
+                ran1 = Math.floor(Math.random() * 7);
+                    self.ban0.src = banner[ran1];
+                ran2 = Math.floor(Math.random() * 7);
+                    self.ban1.src = banner[ran2];
+                ran3 = Math.floor(Math.random() * 7);
+                    self.ban2.src = banner[ran3];
+                
+                
+            }, 100);
+        }
+        function select(){
+            clearInterval(changeImg);
+            if(ran1==ran2 && ran2==ran3){
+                result.innerHTML="Congratulation, you won 1000$!!";
+                p1.money+=1000;
+                p2.money-=1000;
+            }else if(ran1==ran2 || ran2==ran3 || ran1==ran3){
+                result.innerHTML="Congratulation, you won 200$!!";
+                p1.money+=200;
+                p2.money-=200;
+            }else{
+                result.innerHTML="Try Again, put 100$!";
+                p1.money-=100;
+                p2.money+=100;
+            }
+        }
+        function print(){
+                balance.innerHTML="<p>"+p1.name + " : "+ p1.money+"</p><p>"+p2.name + " : "+ p2.money+"</p>";
+        }
+    </script>
+</body>
+</html>

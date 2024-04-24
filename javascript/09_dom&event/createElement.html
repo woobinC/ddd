@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li.el:hover{
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" onclick="createHappy()">행복을 위해 필요한 것은?</button>
+  <ul id="happy"></ul>
+
+  <script>
+    let h1 = document.createElement("h1");
+    console.log(h1);
+    let node = document.createTextNode("create element");
+    console.log(node);
+    h1.append(node);
+    document.body.prepend(h1);
+
+    let need = ["money", "time", "health", "family", "dopamin"];
+
+    let happy = document.querySelector("#happy");
+
+    const createHappy = function(){
+      for(let i in need) {
+        let li = document.createElement("li");
+        li.setAttribute("class", "el");
+        let node = document.createTextNode(need[i]);
+        li.append(node);
+        happy.append(li);
+      }
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>SetInterval &amp; CrearInterval</h1>
+
+  <h2>일정 시간 간격으로 값 증감시키기</h2>
+  <button onclick="clearInterval(forward)">증가 정지</button>
+  <button onclick="clearInterval(backward)">감소 정지</button>
+
+  <script>
+    let addNum = 0;
+    let subNum = 1000;
+
+    let forward = setInterval(add, 1000);
+    let backward = setInterval(sub, 1000);
+
+    function add() {
+      addNum++;
+      console.log("addNum : " + addNum)
+    }
+    function sub() {
+      subNum--;
+      console.log("subNum : " + subNum)
+    }
+  </script>
+</body>
+
+</html>

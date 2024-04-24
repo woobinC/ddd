@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="/images/0.jpg" alt="" width="200">
+  <button type="button" id="stop">그만</button>
+  <button type="button" id="start">고고</button>
+
+  <script>
+    document.getElementById("start").addEventListener("click", startIt);
+    document.getElementById("stop").addEventListener("click", stopIt);
+
+    let start = 0;
+    let timer;
+
+    function carousel(){
+      start %= 5;
+      let images_data = "/images/" + (start + 1) + ".jpg";
+      document.images[0].src = images_data;
+      start++;
+    }
+
+    function startIt(){
+      // if(timer) stopIt();
+      //인터벌 함수(1초에 한번씩 carousel 함수를 실행)를 실행하면서 그 함수를 timer 변수에 저장
+      timer = setInterval(carousel, 1000);
+      document.getElementById("start").disabled = true;
+    }
+
+    function stopIt(){
+      clearInterval(timer);
+      document.getElementById("start").disabled = false;
+    }
+  </script>
+</body>
+</html>
