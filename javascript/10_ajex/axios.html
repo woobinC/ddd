@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <h1>axios</h1>
+  <p id="result"></p>
+
+  <script>
+    axios({
+      method: "get",
+      url: "fetch_info.txt"
+  }).then(function(response){
+    console.log(response);
+    console.log(response.data);
+    console.log(response.headers);
+    document.querySelector("#result").innerHTML = response.data;
+  });
+  // then 이라는건 2개의 메소드(함수 function)를 인자(파라미터)로 받아요
+  // 첫번째 메소드 에는 성공할때 실행시킬꺼
+  //  두번째 메소드에는 실패했을 실행시킬꺼가 들어와요 
+  //  두번째 메소드는 생략 가능
+  </script>
+</body>
+</html>

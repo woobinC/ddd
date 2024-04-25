@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    if(true){
+            //let: local 변수 선언
+            let name1 = "jack";
+            var name2 = "tom";
+        }
+        //console.log(name1 + " / "+ name2);
+        let x = 10;
+        function letTest(){
+            let x = 1; 
+            if(true){
+                let x = 5;
+                console.log(x);
+            }
+            console.log(x);
+        }
+        console.log(x);
+        letTest();
+        
+        for(let i = 0; i< 5; i++ ){
+            console.log(x);
+        }
+//        const(상수)로 선언된 변수는 값 변경 불가능
+        //b = "hi";
+        
+        let name = "tom";
+        let msg = "welcome " + name + "!";
+        console.log(msg);
+        let msg2 = `welcome ${name}!`;
+        console.log(msg2);
+        
+        let y = 33;
+        let z = 77;
+        let result = `The sum is ${y+z}`;
+            console.log(result);
+            //The sum is 110
+  </script>
+</body>
+</html>

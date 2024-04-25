@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>fetch example: ajax 대체 브라우저 내장 API</h1>
+  <button onclick="getText()">텍스트 읽어오기</button>
+  <p id="demo">Fetch a file to change this text.</p>
+
+  <script>
+    let file = "fetch_info.txt";
+
+    // const getText = function(){
+    //   fetch(file)
+    //   // .then( result => console.log(result))
+    //   .then(x => x.text())
+    //   .then(y => document.getElementById("demo").innerHTML = y);
+    // }
+
+    async function getText() {
+        let x = await fetch(file);
+        let y = await x.text();
+        document.getElementById("demo").innerHTML = y;
+    }
+  </script>
+</body>
+
+</html>

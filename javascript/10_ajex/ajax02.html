@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="loadXMLDoc()">CD 모음집 가져오기</button>
+  <hr>
+  <table id="cd"></table>
+
+  <script>
+    const loadXMLDoc = function () {
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          callback(this);
+        }
+      }
+      xhttp.open("get", "ajax.xml", true);
+      xhttp.send();
+
+    }
+
+    function callback(result) {
+      console.log(result);
+      let xmlDoc = result.responseXML;
+      console.log(xmlDoc);
+      let title = "<tr><th>Artist</th><th>Title</th></tr>";
+      let cds = xmlDoc.getElementsByTagName("CD");
+      for (let i = 0; i < cds.length; i++) {
+        title += "<tr><td>"
+          + cds[i].getElementsByTagName("TITLE")[0].textContent + "</td><td>"
+          + cds[i].getElementsByTagName("ARTIST")[0].textContent + "</td></tr>";
+      }
+      document.querySelector("#cd").innerHTML = title;
+    }
+  </script>
+</body>
+
+</html>

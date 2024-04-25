@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // add(3, 8);
+    // function add(x, y){
+    //   console.log(x + y);
+    // }
+
+    // const add = function(x, y){
+    //   console.log(x + y);
+    // }
+    // add(3, 8);
+
+    const add = (x, y) => console.log(x + y);
+    add(3, 8);
+
+    // const greet = function(x){
+    //   return "welcome" + x;
+    // }
+
+    const greet = x => "welcome" + x;
+
+    console.log(greet("home"));
+
+    //arrow 함수로 alert 띄우기
+    // const x = y => alert(y);
+    // x("dd");
+
+    //forEach
+    const arr = [2,3,4,5];
+    // for(let i in arr){
+    //   console.log(arr[i]*2);
+    // }
+
+    // arr.forEach(function(x){
+    //   console.log(x*2);
+    // })
+
+    arr.forEach(x => console.log(x*2));
+
+    //함수 매개변수의 기본값
+    // function sum(a, b = 8, c = 12) {
+    //   return a + b + c;
+    // }
+
+    const sum = (a,b = 8, c = 12) => a + b + c;
+    console.log(sum(7, 3, 9));
+    console.log(sum(7));
+
+  </script>
+</body>
+</html>

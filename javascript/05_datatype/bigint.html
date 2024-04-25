@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>JavScript Bigint</h1>
+<h2>BigInt Multiply</h2>
+<p>Operators that can be used a Number can be used on a BigInt.</p>
+<p id="demo"></p>
+
+<script>
+  let a = BigInt(999999999999999999);
+  let type = typeof a;
+  console.log(type);
+
+let x = 9007199254740995n;
+let y = 9007199254740995n;
+let z = x * y;
+// console.log(x * 3);
+console.log(Number(x)* 3); //연산 부정확
+console.log(x * BigInt(3));
+
+document.getElementById("demo").innerHTML = z; 
+</script>
+</body>
+</html>

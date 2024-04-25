@@ -1,20 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stopwatch</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <style>
+    h1 {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .container {
+      text-align: center;
+      margin: 50px;
+
+    }
+
+    #watch {
+      font-size: 36px;
+      font-family: Arial, sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      background-color: skyblue;
+    }
+
+    #records {
+      list-style-type: none;
+    }
+  </style>
+
 </head>
+
 <body>
-<div class="container">
-  <div id="watch">00:00:00:000</div>
-  <button type="button" class="btn" id="startBtn">Start</button>
-  <button type="button" class="btn" id="stopBtn">Stop</button>
-  <button type="button" class="btn" id="recordBtn">Record</button>
-  <button type="button" class="btn" id="resetBtn">Reset</button>
-  <ul id="records"></ul>
-</div>
-<script src="script.js"></script>
+  <h1>Stop Watch</h1>
+  <div class="container">
+    <div id="watch">00:00:00:000</div>
+    <button type="button" class="btn" id="startBtn">Start</button>
+    <button type="button" class="btn" id="stopBtn">Stop</button>
+    <button type="button" class="btn" id="recordBtn">Record</button>
+    <button type="button" class="btn" id="resetBtn">Reset</button>
+    <ul id="records"></ul>
+  </div>
+
+  <script>
+    let watch = document.getElementById('watch');
+    let startBtn = document.getElementById('startBtn');
+    let stopBtn = document.getElementById('stopBtn');
+    let recordBtn = document.getElementById('recordBtn');
+    let resetBtn = document.getElementById('resetBtn');
+    let records = document.getElementById('records');
+    let startTime;
+    let elapsedTime = 0;
+    let timer;
+
+    function formatTime(milliseconds) {
+      var hours = Math.floor(milliseconds / (1000 * 60 * 60));
+      var minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
+      var milliseconds = Math.floor((milliseconds % 1000));
+
+      return (
+        (hours < 10 ? "0" : "") + hours + ":" +
+        (minutes < 10 ? "0" : "") + minutes + ":" +
+        (seconds < 10 ? "0" : "") + seconds + ":" +
+        (milliseconds < 100 ? (milliseconds < 10 ? "00" : "0") : "") + milliseconds
+      );
+    }
+
+    function updateStopwatch() {
+      var currentTime = Date.now();
+      elapsedTime = currentTime - startTime;
+      watch.textContent = formatTime(elapsedTime);
+    }
+
+    function startwatch() {
+      startTime = Date.now() - elapsedTime;
+      timer = setInterval(updateStopwatch, 1);
+      startBtn.disabled = true;
+    }
+
+    function stopwatch() {
+      clearInterval(timer);
+      startBtn.disabled = false;
+    }
+
+    function recordTime() {
+      var recordItem = document.createElement('li');
+      recordItem.textContent = formatTime(elapsedTime);
+      records.append(recordItem);
+    }
+
+    function resetStopwatch() {
+      clearInterval(timer);
+      elapsedTime = 0;
+      watch.textContent = formatTime(elapsedTime);
+      startBtn.disabled = false;
+      records.innerHTML = '';
+    }
+
+    startBtn.addEventListener('click', startwatch);
+    stopBtn.addEventListener('click', function () {
+      stopwatch();
+
+    });
+    recordBtn.addEventListener('click', recordTime);
+    resetBtn.addEventListener('click', resetStopwatch);
+  </script>
 </body>
+
 </html>

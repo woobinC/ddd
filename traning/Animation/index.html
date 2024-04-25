@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  <script src="script.js"></script>
+  <script>
+    const canvas = document.createElement('canvas');
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.documentElement.append(canvas);
+    const ctx = canvas.getContext('2d');
+
+    class Ball {
+      constructor(x, y, xSpeed, ySpeed) {
+        this.x = x;
+        this.y = y;
+        this.xSpeed = xSpeed;
+        this.ySpeed = ySpeed;
+      }
+    }
+
+    function drawBall(ball) {
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, 10, 0, Math.PI * 2);
+      ctx.fillStyle = 'skyblue';
+      ctx.fill();
+    }
+
+    const balls = [];
+    let ballCount = 0;
+
+    function addBall() {
+      const x = Math.random() * (canvas.width - 40) + 20;
+      const y = Math.random() * (canvas.height - 40) + 20;
+      const xSpeed = Math.random() * 4 - 2;
+      const ySpeed = Math.random() * 4 - 2;
+      const newBall = new Ball(x, y, xSpeed, ySpeed);
+      balls.push(newBall);
+      ballCount++;
+    }
+
+
+    function drawBallCount(count) {
+      ctx.font = '24px Arial';
+      ctx.fillStyle = 'green';
+      ctx.fillText(`공 개수: ${count}`, 10, 30);
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (const ball of balls) {
+        ball.x += ball.xSpeed;
+        ball.y += ball.ySpeed;
+        if (ball.x + 20 > canvas.width || ball.x - 20 < 0) {
+          ball.xSpeed = -ball.xSpeed;
+        }
+        if (ball.y + 20 > canvas.height || ball.y - 20 < 0) {
+          ball.ySpeed = -ball.ySpeed;
+        }
+        drawBall(ball);
+      }
+      drawBallCount(ballCount);
+      requestAnimationFrame(animate);
+    }
+
+    window.onresize = function () {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    const intervalID = setInterval(addBall, 1000);
+
+    animate();
+
+  </script>
 </body>
+
 </html>

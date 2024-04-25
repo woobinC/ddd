@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //Destructing: 해체
+
+    //두 array를 해체하여 하나의 오브젝트로 사용
+    let arr = ['1', '2', '3'];
+    let [one, two, three] = arr;
+
+    //Rest & Spread
+
+    //arguments 사용하여 미확정 개수의 매개변수 처리하기
+    function containAll(arr) {
+      for (let i = 1; i < arguments.length; i++) {
+        let num = arguments[i];
+        if (arr.indexOf(num) === -1) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    //spread 기능을 apply 함수를 사용해서 구현
+    function myFunc(w, x, y, z) {
+      console.log(w + x + y + z);
+    }
+    var args = [1, 2, 3];
+    myFunc.apply(null, args.concat(4));
+
+    var date = new Date(2019, 6, 8);
+    console.log(date);
+
+    var dataFields = [1970, 0, 1];
+    var date2 = new Date(...dataFields);
+    console.log(date2);
+  </script>
+</body>
+
+</html>

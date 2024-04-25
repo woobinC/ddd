@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>ajax</h1>
+  <p>Ajax는 개발자의 꿈이다. 왜냐하면,</p>
+  <ul>
+    <li>페이지가 로드된 후에 웹서버에서 데이터를 읽어들인다.</li>
+    <li>페이지를 리로드 하지 않고 페이지를 업데이트 한다.</li>
+    <li>웹 서버에 백그라운드에서 데이터를 보낸다.</li>
+  </ul>
+  <p>Ajax의 정의</p>
+  <ul>
+    <li>Asynchronous JavaScript And XML:비동기 자바스크립트 &amp; XML</li>
+    <li>not a programming language: 일종의 오브젝트</li>
+    <li>
+      <ul>사용법:
+        <li>A browser built-in XMLHttpRequest object (to request data from a web server): 브라우저 빌트인 오브젝트(XMLHttpRequest)를
+          사용해서 웹서버에서 데이터를 읽어들인다. </li>
+        <li>JavaScript and HTML DOM (to display or use the data): 읽어온 데이터를 DOM과 Javascript를 사용해서 보여준다.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>Ajax의 원리</p>
+  <img src="../../images/pic_ajax.gif" alt="">
+  <hr>
+  <p>Ajax의 예</p>
+  <button onclick="loadDoc('ajax.txt')">load</button>
+
+  <div id="content">content</div>
+
+  <script>
+
+    
+
+    function loadDoc(url) {
+      let xhttp = new XMLHttpRequest();
+      //request의 결과(response)를 받아 처리하기 위한 이벤트 및 함수
+      
+      xhttp.onreadystatechange = function(){
+        console.log(this);
+        if(this.readyState == 4 && this.status == 200){
+          callback(this.responseText);
+        }
+      }
+      
+      //XMLHttpRequest 객체 설정(method, url, data)
+      
+      xhttp.open("get", url);
+      xhttp.send();
+      //console.log(xhttp);
+    }
+
+    function callback(data) {
+      document.querySelector("#content").innerHTML = data;
+    }
+  </script>
+</body>
+
+</html>

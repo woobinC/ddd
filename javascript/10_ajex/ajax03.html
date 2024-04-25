@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ans{
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>오늘의 퀴즈</h1>
+  <button onclick="loadDoc('ajax.json')">퀴즈 출제</button>
+
+  <div id="content"><img src="/images/docca2.jpg" alt="" width="300"></div>
+
+  <script>
+    function loadDoc(url) {
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+          callback(this);
+        }
+      }
+      xhttp.open("get", url);
+      xhttp.send();
+    }
+    function callback(data){
+      console.log(data);
+      let text = data.responseText;
+      console.log(text);
+      let jsonObject = JSON.parse(text);
+      console.log(jsonObject);
+      let quiz = jsonObject.quiz;
+      let content = "";
+      for(let i in quiz){
+        content += `<h3>${i}</h3>`;
+        for(let j in quiz[i]){
+          for(let k in quiz[i][j]){
+            if(k == "answer"){
+              content += `<p class = "ans"> ${k} : ${quiz[i][j][k]}</p>`;
+            }else{
+              content += `<p>${k} : ${quiz[i][j][k]}</p>`;
+            }
+          }
+        }
+      }
+      document.querySelector("#content").innerHTML = content;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //map 객체
+    let map = new Map([['k1', 'v1'], ['k2', 'v2']]);
+    console.log(map.size);
+
+    console.log(map.get('k1'));
+    console.log(map.has('k1'));
+    console.log(map.set('k3', 'v3'));
+
+    console.log(map);
+
+    //get / set / keys() / has(key) / delete(key) / clear() / valuse() / entries()
+    //entries(): [key, value] 형태로 만들어 줌
+    for (let key of map.entries()) {
+      //alert("wow");
+      console.log(key[0] + " : " + key[1]);
+    }
+
+    for (let key of map.keys()) {
+      console.log(key + " : " + map.get(key));
+    }
+    console.log("===============================");
+
+    //set 객체: 중복 허용 안 함.
+    let set = new Set([1, 2, 4, 59, 4, 9, 2]);
+    console.log(set.size);
+
+    //add(value) / delete(value) / has(value) / clear() / values()
+
+    set.add(7).add(818).add(9999);
+    console.log(set.has(9999));
+    for (let v of set.values()) {
+      console.log(v);
+    }
+  </script>
+</body>
+
+</html>
