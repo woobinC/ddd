@@ -35,6 +35,11 @@
     var args = [1, 2, 3];
     myFunc.apply(null, args.concat(4));
 
+    //spread
+    const myFunc2 = (w,x,y,z) => console.log(w+x+y+z);
+    var args2 = [1,2,3];
+    myFunc2(...args2,4);
+
     var date = new Date(2019, 6, 8);
     console.log(date);
 

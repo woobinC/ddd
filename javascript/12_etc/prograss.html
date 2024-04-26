@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>progress &amp; meter</h1>
+  <progress id="prog" value="0" max="100"></progress>
+  <hr>
+  <meter id="met" value="0" max="100"></meter>
+  <hr>
+  <input type="button" onclick="go()" value="시작!">
+
+  <script>
+    const prog = document.querySelector("#prog");
+    const met = document.querySelector("#met");
+
+    function go() {
+      let load = 0;
+      let timer = setInterval(() => {
+        load += 1;
+        prog.value = load;
+        met.value = load;
+        if (load == 100) {
+          clearInterval(timar);
+        }
+      }, 100);
+    }
+  </script>
+
+</body>
+
+</html>

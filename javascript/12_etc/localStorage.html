@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>local storage</h1>
+  <select name="" id="list" size="10"></select>
+
+  <fieldset>
+    <legend>로컬 스트리지 저장소</legend>
+    <p>key: <input type="text" id="key"></p>
+    <p>value: <input type="text" id="value"></p>
+    <input type="button" name="" id="add" value="입력">
+    <input type="button" name="" id="remove" value="삭제">
+  </fieldset>
+
+  <script>
+    let list = document.getElementById("list");
+
+    window.onload = function () {
+      let add = document.getElementById("add");
+      let remove = document.getElementById("remove");
+      add.addEventListener("click", addData);
+      remove.addEventListener("click", removeData);
+      init();
+    }
+
+    function init(){
+      list.innerHTML = "";
+      for(let i = 0; i < localStorage.length; i++){
+        let key = localStorage.key(i);
+        console.log(key);
+        list.options[list.options.length] = new Option(`key: ${key}, value: ${localStorage[key]}`, key);
+      }
+    }
+
+    const addData = function() {
+      let key = document.getElementById("key");
+      let value = document.getElementById("value");
+      localStorage[key.value] = value.value;
+      init();
+      key.value = "";
+      value.value = "";
+    }
+
+    const removeData = function() {
+      if(list.selectedindex < 0) return;
+      let selected = list.options[list.selectedIndex].value;
+      localStorage.removeItem(selected);
+      init();
+    }
+  </script>
+</body>
+
+</html>

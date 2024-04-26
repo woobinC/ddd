@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="smaile.getA()">우하하</button>
+  <button onclick="smaile.getB()">ㅋㅋㅋ</button>
+  <button onclick="smaile.getC()">ㅎㅎㅎ</button>
+
+  <script>
+    // const wow = function(){
+    //   console.log("wow");
+    // }
+    // wow();
+
+    // window.onload = function(){
+    //   console.log("wow");
+    // }
+
+    (function(){
+      console.log("wow");
+    })();
+
+    ((aa) => console.log(aa))("what");
+
+    //자동실행 함수를 이용해서 관련된 함수를 모아 하나의 모듈처럼 사용
+    const smaile = (function(){
+      return{
+        getA : function() {
+          alert("우하하")
+        },
+        getB : function() {
+          alert("ㅋㅋㅋ")
+        },
+        getC : function() {
+          alert("ㅎㅎㅎ")
+        }
+      }
+    })();
+
+    //자동실행 함수를 이용해서 특정 변수에 대한 접근 제한 - 내부 메소드를 통해서만 변수값 제어 가능
+    const Counter = (function counterIIFE() {
+            // 현재 counter 값을 저장하기 위한 변수
+            let current = 0;
+
+            return {
+                getCurrentValue: function () {
+                    return current;
+                },
+
+                increaseValue: function () {
+                    current = current + 1;
+                    return current;
+                },
+
+                decreaseValue: function () {
+                    current = current - 1;
+                    return current;
+                },
+            };
+        })();
+
+        console.log(Counter.getCurrentValue()); // 0
+        console.log(Counter.increaseValue()); // 1
+        console.log(Counter.decreaseValue()); // 0
+        console.log(Counter.current + 1);
+  </script>
+</body>
+
+</html>
