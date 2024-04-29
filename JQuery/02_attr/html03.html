@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>append, prepend, appendTo, prependTo, before, after</h1>
+  <button id="append_prepend">append_prepend</button>
+  <button id="before_after">before_after</button>
+  <button id="appendTo">appendTo</button>
+  <p id="jq">jQuery is <b>fun</b>!!!</p>
+
+  <script>
+    //자식으로 붙임
+    $(function () {
+      $('#append_prepend').click(function () {
+        $('#jq')
+          .append("<h1>it's true!</h1>")
+          .prepend("<h1>it's true!</h1>");
+      });
+
+      //형제로 붙임
+      $('#before_after').click(function () {
+        $('#jq')
+          .before("<h1>are you hungry</h1>")
+          .after("<h1>yes, i`m hungry</h1>");
+      });
+
+      //원하는 곳에 붙임
+      $('#appendTo').click(function () {
+        $('#jq')
+          .appendTo('#append_prepend')
+          .prependTo('#append_prepend');
+      });
+
+      $('h1').click(function () {
+        var btn = $('<button>').text($('#jq').text());
+        $('#appendTo').after(btn);
+      });
+    });
+  </script>
+</body>
+
+</html>

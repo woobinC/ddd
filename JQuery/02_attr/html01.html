@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <p>이름: <input type="text" id="test" value="홍길동"></p>
+  <button>당신의 이름은?</button>
+  <h3>당신의 이름은 <span id="name"></span>이군요</h3>
+
+  <script>
+    $(function(){
+      let name = $('#test').val();
+      $('#name').html("<i>" + name + "</i>");
+      $('#name').html("<i>" + name + "</i>").attr("style", "font-size:30px; color:teal;");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <p>jQuery is <b>fun</b>!!!</p>
+  <button id="html">html</button>
+  <button id="text">text</button>
+
+  <script>
+    $(function () {
+      $('#html').click(function () {
+        let cont = $('p').html();
+        //  let cont = $('p').text();
+        console.log(cont);
+        $('p').html("<h1>it's true!</h1>");
+      });
+
+      $('#text').click(function () {
+        let cont = $('p').text();
+        console.log(cont);
+        $('p').text("<h1>it's true!</h1>");
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>내가 좋아하는 과일 </h1>
+  <img src="/images/0.jpg" alt="사과" title="apple">
+
+  <hr>
+  <button id="lemon">lemon</button>
+  <button id="kiwi">kiwi</button>
+
+  <script>
+    $(function(){
+      $('#lemon').click(function(){
+        // $('img').attr('src','/images/3.jpg');
+        // $('img').attr('title','lemon');
+        // $('img').attr('alt','레몬');
+
+        // $('img').attr('src','/images/3.jpg').attr('title','lemon').attr('alt','레몬');
+
+        $('img').attr({"src":"/images/3.jpg", "title":"lemon", "alt":"레몬"});
+      });
+      $('#kiwi').click(function(){
+        $('img').attr('src','/images/2.jpg');
+        $('img').attr('title','kiwi');
+        $('img').attr('alt','키위');
+      });
+      $('img').mouseenter(function(){
+        $('img').attr({"src":"/images/7.jpg", "title":"수박", "alt":"수박"})
+      })
+      $('img').mouseleave(function(){
+        $('img').attr({"src":"/images/8.jpg", "title":"멜론", "alt":"멜론"})
+      })
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>attr - 속성 추가 삭제 수정</h1>
+  <a href="http://www.google.com" id="google"><img src="/images/google.png" alt="" width="100" id="im"></a>
+  <hr>
+  <button id="original">원래 크기로</button>
+  <button id="go">구글 안 가고 w3로 고고씽!</button>
+
+  <script>
+    $(function(){
+      $('#original').click(function(){
+        $('#im').removeAttr('width');
+      });
+      $('#go').click(function(){
+        $('#google').attr('href', 'http://w3schools.com');
+        $('#im').attr('src', '/images/0.jpg')
+      });
+    });
+
+    
+  </script>
+</body>
+
+</html>

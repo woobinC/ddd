@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>No Conflict(기호 충돌 방지)</h1>
+  <p>다른 framework이 $ 기호를 사용할 경우 발행할 수 있는 충돌을 피하기 위한 메소드: jQuery를 $로 호출하지 않겠다는 의미</p>
+  <p><span id="devote">증오는 </span>사랑입니다.</p>
+  <p><span id="concern">증오는 </span>사랑입니다.</p>
+  <p><span id="hate">증오는 </span>사랑입니다.</p>
+  <button id="arrow">큐피드의 화살</button>
+
+  <script>
+    // $.noConflict();
+    // $(function(){
+    //   $('#arrow').click(function(){
+    //     $('span').text("헌신은 ");
+    //   });
+    // });
+
+    // jQuery(function(){
+    //   jQuery('#arrow').click(function(){
+    //     jQuery('#concern').text("관심은 ");
+    //   });
+    // });
+
+    // let jq = $.noConflict();
+    // jq(function(){
+    //   jq('#arrow').click(function(){
+    //     jq('#hate').text("미움은 ");
+    //   });
+    // });
+
+    jQuery(function($){
+      $('#arrow').click(function(){
+        $('#devote').text("헌신은 ")
+        $('#concern').text("관심은 ")
+        $('#hate').text("미움은 ")
+      });
+    });
+  </script>
+</body>
+
+</html>

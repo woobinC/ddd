@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .yell {
+      color: yellow
+    }
+
+    .important {
+      animation-name: move;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes move {
+      from {
+        background-color: white;
+        margin: 0px;
+        padding: 0px;
+        font-size: 16px;
+        font-weight: normal;
+        color: black;
+      }
+
+      to {
+        background-color: firebrick;
+        margin: 20px;
+        padding: 10px;
+        font-size: xx-large;
+        font-weight: bolder;
+        color: white;
+      }
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <button id="add">add class</button>
+  <button id="remove">remove class</button>
+  <button id="toggle">toggle class</button>
+
+  <h1>오늘은 금요일</h1>
+  <h2>내일은 토요일 ㅋㅋㅋ</h2>
+  <p>그럼 그 다음 날은? </p>
+  <p>그 날은 가장 중요한 날입니다.</p>
+
+  <div>다시 시작되거든요</div>
+
+  <script>
+    $(function(){
+      $('#add').click(function(){
+        $('h1,h2,p').addClass('yell');
+      });
+
+      $('#remove').click(function(){
+        $('h1,h2,p').removeClass();
+      });
+      
+      $('#toggle').click(function(){
+        $('div').toggleClass('important');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

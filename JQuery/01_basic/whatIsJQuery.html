@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>What Is JQuery?</h1>
+  <p>자바스크립트 라이브러리</p>
+  <p>자바스크립트 프로그래밍을 아주 간단하게 만들어준다</p>
+  <p>배우기 쉽다</p>
+
+  <h3>jquery 다운로드</h3>
+  <p>(<a href='http://jquery.com/download/' target="_blank">jQuery.com</a>)에서 라이브러리 다운로드</p>
+  <p>구글 등의 사이트에서 CDN을 받아서 문서에 포함</p>
+
+  <h3 id="start" onclick="change()">jquery 재미없네 그만 끝내고 고홈</h3>
+
+  <script>
+    function change(){
+      // document.getElementById("start").innerHTML = "jquery 재미있네";
+
+      $('#start').html("jquery 재미있네")
+    }
+
+  </script>
+
+</body>
+
+</html>
