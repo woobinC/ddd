@@ -19,27 +19,27 @@
     <div class="buttons">
 
         <div class="oneButtons">
-            <button type="button" onclick="goToLotto()" id="Lotto">Lotto</button>
-            <button type="button" onclick="goToPuzzle()" id="Puzzle">Puzzle</button>
+            <button type="button" onclick="goTotictactoe()" id="tictactoe">TicTacToe</button>
+            <button type="button" onclick="goToKasino()" id="Kasino">Kasino</button>
             <button type="button" onclick="goToFlappy()" id="Flappy">Flappy Bird</button>
         </div>
         <div class="twoButtons">
             <button type="button" onclick="goToDoobleJump()" id="DoobleJump">Dooble Jump</button>
-            <button type="button" onclick="goBreakOut()" id="BreakOut">BreakOut</button>
+            <button type="button" onclick="goToBreakOut()" id="BreakOut">BreakOut</button>
         </div>
 
     </div>
 
     <script>
 
-        function goToLotto() {
-            alert('Lotto 게임으로 이동합니다.');
-            window.location.href = '#'; // Lotto 게임 페이지로 이동
+        function goTotictactoe() {
+            alert('tictactoe 게임으로 이동합니다.');
+            window.location.href = '../tictactoe-game/tictactoe.html'; // Lotto 게임 페이지로 이동
         }
 
-        function goToPuzzle() {
-            alert('Puzzle 게임으로 이동합니다.');
-            window.location.href = '#'; // Puzzle 게임 페이지로 이동
+        function goToKasino() {
+            alert('Kasino 게임으로 이동합니다.');
+            window.location.href = '../kasino-game/kasino.html'; // Puzzle 게임 페이지로 이동
         }
 
         function goToFlappy() {
@@ -52,7 +52,7 @@
             window.location.href = '../Dooble-Jump/index.html'; // Dooble Jump 게임 페이지로 이동
         }
 
-        function goBreakOut() {
+        function goToBreakOut() {
             alert('벽돌깨기 게임으로 이동합니다.');
             window.location.href = '../break-out/index.html'; // 벽돌깨기 게임 페이지로 이동
         }
