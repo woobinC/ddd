@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #444;
+      padding: 3em;
+      font-size: 1.4em;
+    }
+
+    .sample {
+      border: 10px solid #555;
+      border-radius: 4px;
+      padding: 0.5em 1em;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+    }
+
+    #top {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+
+      padding: 1em 2em;
+      background-color: crimson;
+      border-radius: 6px;
+
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>마우스 휠 이벤트</h1>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+  <div class="sample">Sample</div>
+
+  <a href="#" id="top">TOP</a>
+
+  <script>
+    $(function () {
+      $(window).on("wheel", function (e) {
+        // console.log(e);
+        console.log(e.originalEvent.deltaY);
+        console.log($(this).scrollTop());
+        if (e.originalEvent.deltaY > 0) {
+          if ($(this).scrollTop()) {
+            alert("dd");
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

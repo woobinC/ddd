@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="body">
+
+
+    <h1>종합 게임 천국</h1>
+
+
+
+    <div class="buttons">
+
+        <div class="oneButtons">
+            <button type="button" onclick="goToLotto()" id="Lotto">Lotto</button>
+            <button type="button" onclick="goToPuzzle()" id="Puzzle">Puzzle</button>
+            <button type="button" onclick="goToFlappy()" id="Flappy">Flappy Bird</button>
+        </div>
+        <div class="twoButtons">
+            <button type="button" onclick="goToDoobleJump()" id="DoobleJump">Dooble Jump</button>
+            <button type="button" onclick="goBreakOut()" id="BreakOut">BreakOut</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        function goToLotto() {
+            alert('Lotto 게임으로 이동합니다.');
+            window.location.href = '#'; // Lotto 게임 페이지로 이동
+        }
+
+        function goToPuzzle() {
+            alert('Puzzle 게임으로 이동합니다.');
+            window.location.href = '#'; // Puzzle 게임 페이지로 이동
+        }
+
+        function goToFlappy() {
+            alert('Flappy Bird 게임으로 이동합니다.');
+            window.location.href = '../flappy-bird-game/index.html'; // Flappy Bird 게임 페이지로 이동
+        }
+
+        function goToDoobleJump() {
+            alert('Doodle Jump 게임으로 이동합니다.');
+            window.location.href = '../Dooble-Jump/index.html'; // Dooble Jump 게임 페이지로 이동
+        }
+
+        function goBreakOut() {
+            alert('벽돌깨기 게임으로 이동합니다.');
+            window.location.href = '../break-out/index.html'; // 벽돌깨기 게임 페이지로 이동
+        }
+
+
+
+    </script>
+
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>foo</li>
+    <li>bar</li>
+  </ul>
+  <div id="li_content"></div>
+  <hr>
+  <button id="changeColor">색깔 바꾸기</button>
+  <div style="background-color: red"></div>
+  <div style="background-color: yellow"></div>
+  <div style="background-color: green"></div>
+
+  <script>
+    $(function(){
+      $('li').each(function(idx, elem){
+        $('#li_content').append($('<p>').text($(elem).text()));
+      });
+
+      $('#changeColor').click(function(){
+        $('div').not('#li_content').each(function(){
+          if(this.style.backgroundColor == "red") {
+            this.style.backgroundColor = "yellow";
+          }else if(this.style.backgroundColor == "yellow") {
+            this.style.backgroundColor = "green";
+          }else {
+            this.style.backgroundColor = "red";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

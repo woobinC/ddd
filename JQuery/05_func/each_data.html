@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <h1>data(): data- 속성을 이용하여 태그에 데이터 적재 및 사용</h1>
+  <span data-age="13" id="s1"></span>
+  <span id="s2"></span>
+
+  <script>
+    console.log($('span#s1').data());
+    console.log($('span#s1').data('age'));
+    console.log($('span#s2').data());
+    console.log("-----------------------------")
+    $('span').data('foo', {age:13, name:"kim"});
+    $('span').each(function(){
+      console.log($(this).data('age'));
+      console.log($(this).data('foo'));
+    });
+  </script>
+</body>
+</html>

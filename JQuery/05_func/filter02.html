@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <ul>
+    <li data-age="15">홍길동</li>
+    <li data-age="21">강감찬</li>
+    <li data-age="33">을지문덕</li>
+    <li data-age="5">광개토대왕</li>
+    <li data-age="67">세종대왕</li>
+  </ul>
+  <hr>
+  <h3>성인 목록</h3>
+  <div id="adult"></div>
+
+  <script>
+    $(function(){
+      let result = [];
+      $('li').each(function(){
+        let age = $(this).data('age');
+        if(age >= 18){
+          result.push($(this).text());
+        }
+      });
+      console.log(result);
+    
+      $.each(result, function(i, v){
+        $('#adult').append($('<p>').text(i + " : " + v));
+      });
+
+      function checkAdult(){
+        let age = $(this).data('age');
+        return age >= 18;
+      }
+      result = $('li').filter(checkAdult);
+      console.log(result);
+
+      result.each(function(){
+        let txt = $(this).text();
+        $('#adult').append($('<p>').text(txt));
+      });
+    }); 
+  </script>
+</body>
+
+</html>

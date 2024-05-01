@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .redBox {
+      background-color: red;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      float: left;
+      border: 3px solid green;
+    }
+
+    .box0 {
+      background-color: tomato
+    }
+
+    .box1 {
+      background-color: teal
+    }
+
+    .box2 {
+      background-color: yellowgreen
+    }
+
+    .active {
+      box-shadow: 5px 5px 10px gray;
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <button id="make">만들기</button>
+  <button id="remove">없애기</button>
+  <button id="changeColor">색깔 바꾸기</button>
+
+  <hr>
+  <div></div>
+  <div class="active"></div>
+  <div></div>
+
+  <script>
+    $(function(){
+      $('#make').click(function(){
+        $('div').addClass('redBox');
+      });
+
+      $('#remove').click(function(){
+        $('div').removeClass('redBox');
+        $('div').each(function(i){
+          $(this).removeClass("box" + i);
+        });
+      });
+
+      $('#changeColor').click(function(){
+        $('div').each(function(i){
+          $(this).addClass("box" + i);
+        });
+      });
+      $('div').hover(function(){
+        $('div').removeClass("active");
+        $(this).addClass("active");
+      })
+    });
+  </script>
+
+</body>
+
+</html>

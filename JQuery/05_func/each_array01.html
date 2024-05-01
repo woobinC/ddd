@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <div id="one"></div>
+  <div id="two"></div>
+  <div id="three"></div>
+  <div id="four"></div>
+  <div id="five"></div>
+
+  <script>
+    $(function () {
+      $('div').each(function () {
+        console.log($(this).attr('id'))
+      });
+
+      const num_arr = [33, 77];
+      // $(num_arr).each(function(i, c){
+      $.each(num_arr, function (i, c) {
+        console.log(i);
+        console.log(c);
+      });
+
+      var arr = ["one", "two", "three", "four", "five"];
+      $.each(arr, function (i, val) {
+        $('#' + val).html(`난 오늘 점심 ${val}번 먹어야지`);
+        return (val !== 'three');
+      });
+
+      var obj = { one: "red", two: "orange", three: "yellow", four: "green", five: "blue" };
+      $.each(obj, function(k, v){
+        $('#' + k).append(document.createTextNode(" : " + v)).css("background", v);
+      });
+    });
+  </script>
+</body>
+
+</html>

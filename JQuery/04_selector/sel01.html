@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <div>div
+    <ul>ul
+      <li>li(p의 parent, ul의 자식(첫 번째), div의 후손 )<p>p</p>
+      </li>
+      <li>parent(): 선택된 element의 바로 윗 element</li>
+      <li>parents(): 선택된 element의 모든 조상 elements</li>
+      <li>parentsUntil(): 선택된 element의 특정 조상 elements까지</li>
+      <li>children(): 선택된 element의 자식 elements</li>
+      <li id="sel">siblings(): 선택된 element의 모든 형제 elements</li>
+      <li>next() / nextAll(): 선택된 element의 바로 다음/이후의 형제(들) element(s)</li>
+      <li>prev() / prevAll(): 선택된 element의 바로 전/이전의 형제(들) element(s)</li>
+      <li>eq(): 선택된 element들 가운데 특정 index를 가진 element</li>
+    </ul>
+  </div>
+
+  <script>
+    $(function(){
+      let u_parents = $('ul').parents();
+      u_parents.css("background", "skyblue");
+/*       let u_parent = $('ul').parent();
+      u_parent.css("background", "green");
+      let u_desc = $('ul').children();
+      u_desc.css("background", "yellow");
+      $('li').children().css("background", "pink");
+      $('#sel').next().css("background", "teal");
+      $('#sel').nextAll().css("background", "tomato");
+      $('#sel').prev().css("background", "blue");
+      $('#sel').prevAll().css("background", "teal");
+      $('#sel').siblings().css("background", "gold");
+      $('#sel').siblings().eq(3).css("background", "silver"); */
+      $('ul').parentsUntil('ul').css("background", "tomato");
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .redBox {
+      background-color: red;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      float: left;
+      border: 3px solid blue;
+    }
+
+    .blueBox {
+      background-color: blue;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      float: left;
+      border: 3px solid red;
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <button id="red">빨갱이 만들기</button>
+  <button id="blue">파랭이 만들기</button>
+  <hr>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <script>
+    $(function () {
+      $('#red').click(function () {
+        $('div').addClass("redBox");
+      });
+
+      $('#blue').click(function () {
+        $('div').addClass("blueBox");
+      });
+    });
+  </script>
+
+</body>
+
+</html>

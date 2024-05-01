@@ -21,3 +21,27 @@
   background-image: url('platform.png');
   position: absolute;
 }
+
+#reHome {
+  position: absolute;
+  top: 60%;
+  left: 49%;
+  transform: translate(-50%, 0);
+  padding: 20px;
+  width: 200px;
+  border: none;
+  border-radius: 8px;
+  background-color: burlywood;
+  font-size: 20px;
+  box-shadow: 3px 3px 5px 1px gray;
+}
+
+#reHome a {
+  color: white;
+  text-decoration: none;
+
+}
+#reHome:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}

@@ -63,7 +63,30 @@
 .score_val {
 	color: gold;
 	font-weight: bold;
+	
 }
+#reHome{
+	padding: 20px 50px;
+	margin: 20px;
+	background-color: #73E1FF;
+	text-align: center;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 3px 3px 5px 1px gray;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+#reHome:hover {
+	cursor: pointer;
+	background-color: #6799FF;
+}
+
+#reHome a {
+	text-decoration: none;
+	color:white;
+}
+
 @media only screen and (max-width: 1080px) {
     .message{
 		font-size: 50px;

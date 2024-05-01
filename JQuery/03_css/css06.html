@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .redBox {
+      background-color: red;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      float: left;
+      border: 3px solid blue;
+    }
+
+    .active {
+      background-color: blue;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      float: left;
+      border: 3px solid red;
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>active class 옮기기</h1>
+  <div class='redBox'></div>
+  <div class='redBox active'></div>
+  <div class='redBox'></div>
+
+  <script>
+    $(function(){
+      $('div').hover(function(){
+        $('div').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+  </script>
+</body>
+
+</html>

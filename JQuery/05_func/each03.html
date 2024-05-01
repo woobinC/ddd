@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      float: left;
+      border: 2px blue solid;
+      text-align: center;
+    }
+
+    span {
+      color: red;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <button>Change colors</button>
+  <span></span>
+  <hr>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div id="stop"></div>
+  <div></div>
+
+  <script>
+    $(function () {
+      $('button').click(function () {
+        $('div').each(function (idx, elem) {
+          $(elem).css("background", "skyblue").text(idx);
+          if($(this).is('#stop')) {
+            $('span').text(idx + "에서 멈췄습니다");
+            return false;
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

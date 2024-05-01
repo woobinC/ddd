@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+
+      color: white;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li:hover {
+      background-color: #ccc;
+      color: black;
+    }
+
+    .dd_content {
+      /* position: absolute; */
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px gray;
+      z-index: 1;
+      display: none;
+      color: black;
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    .dd_content:hover {
+      background-color: #777;
+      color: white;
+    }
+
+    li:hover .dd_content {
+      display: block;
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <ul id="hong" data-age="33"></ul>
+
+  <script>
+    $(function () {
+      let obj = { "name": "홍길동" };
+      obj.age = 19;
+      obj.hobby = { "sports": "golf", "instrument": "drum" };
+      console.log(obj);
+      //extend(): 다른 객체를 분해해서 특정 객체의 원소를 확장
+      $.extend(obj, { gender: "male", wife: "olivia" });
+      console.log(obj);
+      console.log($('#hong').data('age'));
+
+      $.each(obj, function (key, item) {
+        if (key == "hobby") {
+          $('#hong').append($('<li id="hobby"></li>').text(key + " :  뭐게?"));
+          $.each(item, function (key, val) {
+            $('#hobby').append($('<dl></dl>').addClass("dd_content").append($('<dd></dd>').text(key + " :  " + val)));
+
+            // $('.dd_content').append($('<dd></dd>').text(key+" :  "+val)); 
+          });
+        } else {
+          $('#hong').append($('<li></li>').text(key + " :  " + item));
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

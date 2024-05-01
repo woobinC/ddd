@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input + span {
+      display: none;
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <form>
+    <input id="focus" type="text"><span>Nice to meet you!</span>
+    <br>
+    <input type="text"><span>Nice to meet you!</span>
+
+  </form>
+
+  <script>
+    $(function(){
+      $('input').focus(function(){
+        $(this).css("background", "skyblue").next().css("display", "inline-block");
+      })
+      .blur(function(){
+        $(this).css("background", "none").next().fadeOut(500);
+      })
+    });
+  </script>
+</body>
+
+</html>

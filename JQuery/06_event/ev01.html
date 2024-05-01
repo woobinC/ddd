@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>jQuery Common Events</h1>
+
+  <ul>Mouse Events
+    <li>click</li>
+    <li>dblclick</li>
+    <li>mouseenter</li>
+    <li>mouseleave</li>
+    <li>mouseover</li>
+    <li>wheel</li>
+    <li>hover</li>
+  </ul>
+
+  <script>
+    $(document).ready(function () {
+      // $('ul li:first-child').hover(function(){
+      $('li').eq(0)
+        .mouseenter(function () {
+          $(this).css("background", "gold");
+        })
+        .mouseleave(function () {
+          $(this).css("background", "none");
+        });
+    });
+  </script>
+
+  <ul>Keyboard Events
+    <li>keydown</li>
+    <li>keyup</li>
+    <li>keypress</li>
+  </ul>
+  <p>당신의 별명은? <input type="text" id="nick"></p>
+  <div>당신의 별명은 <span id="n_name"></span>이군요~</div>
+
+  <script>
+    $(function () {
+      // $('#nick').keyup(function(){
+      //   $('#n_name').text($(this).val());
+      // });
+      $('#nick').keypress(function(){
+        $('#n_name').text($(this).val());
+      });
+    });
+  </script>
+
+<ul>Form Events
+  <li>submit</li>ㄴㅇㅁ21ㄹㄴㅇ
+  <li>change</li>
+  <li>focus</li>
+  <li>blur</li>
+</ul>
+
+<ul>Document Events
+  <li>ready</li>
+  <li>resize</li>
+  <li>scroll</li>
+</ul>
+
+<script>
+  $(function(){
+    $('#nick').focus(function(){
+      $('#nick').css("background", "teal");
+    });
+  });
+</script>
+</body>
+
+</html>

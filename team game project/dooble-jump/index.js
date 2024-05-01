@@ -185,11 +185,11 @@ function fall() {
       console.log('remove')
       grid.removeChild(grid.firstChild)
     }
-    grid.innerHTML = "점수 : " + score
     clearInterval(upTimerId)
     clearInterval(downTimerId)
     clearInterval(leftTimerId)
     clearInterval(rightTimerId)
+    grid.innerHTML = 'Score : ' + score +  '<br><button id="reHome" type="button"><a href = "../game-home/index.html">Game Home</a></button>'
   }
 
 
