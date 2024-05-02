@@ -35,10 +35,12 @@ h1 {
 
 }
 
-.oneButtons, .twoButtons {
+.oneButtons,
+.twoButtons {
     display: flex;
     justify-content: center;
-    
+    list-style-type: none;
+
 }
 
 
@@ -75,40 +77,81 @@ h1 {
     color: #ffb4c7;
 }
 
+#Dinosaur {
+    color: #e41eda;
+}
+
 
 #tictactoe:hover {
     cursor: pointer;
     box-shadow: 0 0 10px 0 hsl(207, 100%, 84%), inset 2px 2px 0 0 #fff;
-    background-image: linear-gradient(to top, #007adf, #23e3ff);
+    background-image: url('../images/tictactoe.PNG');
+    background-size: cover;
+    width: 320px;
+    height: 400px;
+    transition: 0.7s;
+    /* background-image: linear-gradient(to top, #007adf, #23e3ff); */
     color: #fff;
 }
 
 #Kasino:hover {
     cursor: pointer;
     box-shadow: 0 0 10px 0 #ffb4c7, inset 2px 2px 0 0 #fff;
-    background-image: linear-gradient(to top, #ff0844, #ffb199);
-    color: #fff;
+    background-image: url('../images/Kasino.PNG');
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+    transition: 0.7s;
+    /* background-image: linear-gradient(to top, #ff0844, #ffb199);
+    color: #fff; */
 }
 
 #Flappy:hover {
     cursor: pointer;
     box-shadow: 0 0 10px 0 #d4ffae, inset 3px 3px 0 0 #fff;
-    background-image: linear-gradient(to top, #9be15d, #00e3ae);
-    color: #fff;
+    background-image: url('../images/FlappyBird.PNG');
+    background-size: cover;
+    width: 480px;
+    height: 350px;
+    transition: 0.7s;
+    /* background-image: linear-gradient(to top, #9be15d, #00e3ae); */
+    color: #ffffff;
 }
 
 #DoobleJump:hover {
     cursor: pointer;
     box-shadow: 0 0 10px 0 #FAED7D, inset 3px 3px 0 0 #fff;
-    background-image: linear-gradient(to top, #C4B73B, #FAF4C0);
-    color: #fff;
+    background-image: url('../images/DoobleJump.PNG');
+    background-size: cover;
+    width: 250px;
+    height: 380px;
+    transition: 0.7s;
+    /* background-image: linear-gradient(to top, #C4B73B, #FAF4C0);
+    color: #fff; */
 }
 
 #BreakOut:hover {
     cursor: pointer;
     box-shadow: 0 0 10px 0 #FAED7D, inset 3px 3px 0 0 #fff;
-    background-image: linear-gradient(to top, #ffb4c7, #ffe1ea);
-    color: #fff;
+    background-image: url('../images/breakOut.PNG');
+    background-size: cover;
+    width: 450px;
+    height: 300px;
+    transition: 0.7s;
+    /* background-image: linear-gradient(to top, #ffb4c7, #ffe1ea); */
+    color: #346de9;
+}
+
+#Dinosaur:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 #FAED7D, inset 3px 3px 0 0 #fff;
+    background-image: url('../images/dinosaur.PNG');
+    background-size: cover;
+    width: 450px;
+    height: 300px;
+    transition: 0.7s;
+    /* background-image: linear-gradient(to top, #ffb4c7, #ffe1ea); */
+    color: #dfab4a;
 }
 
 /* 메인 css 끝 */
@@ -212,6 +255,3 @@ h1 {
     font-weight: bold;
 
 } */
-
-
-

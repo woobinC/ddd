@@ -1,7 +1,9 @@
 
+
 function randomNum(){
     computerNum=Math.floor(Math.random()*100)+1; 
     console.log("랜덤번호", computerNum)
+
 }
 let computerNum = 0;
 let userNum = document.getElementById("user-input");
@@ -16,7 +18,8 @@ let chanceArea = document.getElementById("chance-area");
 let gameOver = false;
 let history = [];
 
-chanceArea.innerHTML = `남은 기회: ${chance}`;
+chanceArea.innerHTML = `❤❤❤❤❤
+`;
 
 
 userNum.addEventListener("focus", () => {
@@ -30,7 +33,7 @@ function playGame(){
     let userValue=userNum.value
 
     if(userValue<1 && userValue>50){
-        resultArea.textContent="1에서 50까지의 숫자를 입력해주세요"
+        resultArea.textContent="1에서 100까지의 숫자를 입력하시오"
         return;
     }
     if(history.includes(userValue)){
@@ -39,7 +42,11 @@ function playGame(){
     }
 
     chance--;
-    chanceArea.textContent=`남은 기회: ${chance}번`;
+    chanceArea.textContent="";
+    for(let i=0;i<chance;i++){
+        chanceArea.textContent+=`❤`;
+    }
+    //chanceArea.textContent=`남은 기회: ${chance}번`;
     console.log("기회?",chance);
     history.push(userValue);
     console.log("입력값",history);
@@ -52,20 +59,21 @@ function playGame(){
         resultArea.textContent="Up!";
     
     }else{
-        resultArea.textContent="Clear!";
+       resultArea.textContent="Clear!";
+       
         chanceArea.innerHTML="reset버튼을 눌러주세요";
         playButton.disabled=true;
      
     }
  
     if(chance == 0){
-        resultArea.textContent="fail ㅜ.ㅜ";
+        resultArea.textContent="fail";
         chanceArea.innerHTML="reset버튼을 눌러주세요"
         playButton.disabled=true;
         gameOver = true;
     }
     if(gameOver == true){
-        resultArea.textContent="fail ㅜ.ㅜ";
+        resultArea.textContent="fail";
         chanceArea.innerHTML="reset버튼을 눌러주세요"
         playButton.disabled=true;
     }
@@ -75,11 +83,20 @@ function playGame(){
 
 function reset(){
     userNum.value="";
-    resultArea.textContent="1에서 50까지의 숫자를 입력해주세요";
-    chanceArea.innerHTML="남은 기회: 5번";
+    resultArea.textContent="1에서 100까지의 숫자를 입력하라";
+    chanceArea.innerHTML="❤❤❤❤❤";
     randomNum();
     playButton.disabled = false;
     gameOver = false;
     chance = 5;
     history = [];
+
+    if( history = []){
+        alert = "게임 승리, 게임 홈으로 돌아갑니다."
+    }
+
+    
 }
+
+
+

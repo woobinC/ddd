@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+  <h1>변하는 상자</h1>
+  <button id="start">Start Animation</button>
+  <button id="other">Other Animation</button>
+  <button id="clearQueue">ClearQueue Animation</button>
+
+  <div style="background: lightgreen; width:100px; height: 100px; position: absolute; margin-top: 20px"></div>
+
+  <script>
+    $(function () {
+      $('#start').click(function () {
+        $('div')
+          .animate({ "width": "300px", backgroundColor: "red" }, 1500, "swing")
+          .animate({ "height": "300px", backgroundColor: "blue" }, 1500, "swing")
+          .animate({ "width": "200px", backgroundColor: "green" }, 1500, "swing")
+          .animate({ "height": "400px", backgroundColor: "yellow" }, 1500, "swing");
+      });
+
+      var txt = "misson complete!";
+      $('#other').click(function () {
+        $('div').animate({ backgroundColor: "#aa0000", width: "100px", color: "#fff" }, 1000).text(txt);
+        $('div').animate({ backgroundColor: "white" }, 1000);
+      });
+
+      $('#clearQueue').click(function(){
+        $('div').clearQueue();
+      })
+    });
+  </script>
+</body>
+
+</html>

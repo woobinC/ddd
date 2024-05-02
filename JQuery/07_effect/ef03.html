@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      padding: 10px 16px;
+      margin-bottom: 5px;
+    }
+
+    .d {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    #div1 {
+      background-color: red
+    }
+
+    #div2 {
+      background-color: blue
+    }
+
+    #div3 {
+      background-color: green
+    }
+
+    #container {
+      position: relative;
+      border: 3px solid tomato
+    }
+
+    #greeting {
+      display: none;
+      position: absolute;
+      text-align: center;
+      font-size: 50px;
+      width: 400px;
+      height: 300px;
+      top: 20px;
+      left: 150px;
+      color: coral;
+      line-height: 90px;
+      /*            z-index: 1;*/
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>fadeToggle</h1>
+  <button id="out">FadeOut</button>
+  <button id="in">FadeIn</button>
+  <button id="toggle">FadeToggle</button>
+  <button id="to">FadeTo</button>
+  <hr>
+  <div id="container">
+    <div id="div1" class="d"></div>
+    <div id="div2" class="d"></div>
+    <div id="div3" class="d"></div>
+    <div id="greeting">I love U!</div>
+
+  </div>
+
+  <script>
+    $(function(){
+      $('#out').click(function(){
+        $('.d').fadeOut(1000);
+      });
+      $('#in').click(function(){
+        $('.d').fadeIn(1000);
+      });
+      $('#toggle').click(function(){
+        $('#div1').fadeToggle(100);
+        $('#div2').fadeToggle("slow");
+        $('#div3').fadeToggle(1000, function(){
+          $('greeting').css("display", "block").fadeOut(1000, "swing", function(){
+            alert("d");
+          });
+        });
+      });
+      $('.d')
+      .mouseenter(function(){
+        $(this).fadeTo(500, 0.5);
+      })
+      .mouseleave(function(){
+        $(this).fadeTo(500, 1);
+      });
+
+    });
+  </script>
+</body>
+
+</html>

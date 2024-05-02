@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #wrap {
+      width: 100%
+    }
+
+    div {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      font-size: large;
+      letter-spacing: 3px;
+    }
+
+    #flip {
+      background-color: lightcoral;
+      border: 1px solid black;
+    }
+
+    #panel {
+      display: none;
+      background-color: teal;
+      color: white;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 2;
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>slideUp, slideDown, slideToggle</h1>
+
+  <div id="wrap">
+    <div id="flip">오늘의 명언</div>
+    <div id="panel">위험이라 해도 피할 수 없다면 즐겨라</div>
+  </div>
+
+  <script>
+    $(function () {
+      // $('#flip').click(function(){
+      //   $('#panel').slideDown(500, "swing");
+      // });
+      // $('#flip').click(function(){
+      //   $('#panel').slideUp(500, "swing");
+      // });
+      $('#flip').click(function () {
+        $('#panel').toggle(500, "swing");
+      });
+    });
+  </script>
+</body>
+
+</html>

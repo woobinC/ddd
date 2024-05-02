@@ -18,15 +18,29 @@
 
     <div class="buttons">
 
-        <div class="oneButtons">
-            <button type="button" onclick="goTotictactoe()" id="tictactoe">TicTacToe</button>
-            <button type="button" onclick="goToKasino()" id="Kasino">Kasino</button>
-            <button type="button" onclick="goToFlappy()" id="Flappy">Flappy Bird</button>
-        </div>
-        <div class="twoButtons">
-            <button type="button" onclick="goToDoobleJump()" id="DoobleJump">Dooble Jump</button>
-            <button type="button" onclick="goToBreakOut()" id="BreakOut">BreakOut</button>
-        </div>
+        <ul class="oneButtons">
+            <li>
+                <button type="button" onclick="goTotictactoe()" id="tictactoe">TicTacToe</button>
+            </li>
+            <li>
+                <button type="button" onclick="goToKasino()" id="Kasino">Kasino</button>
+            </li>
+            <li>
+                <button type="button" onclick="goToFlappy()" id="Flappy">Flappy Bird</button>
+            </li>
+        </ul>
+        <ul class="twoButtons">
+            <li>
+                <button type="button" onclick="goToDoobleJump()" id="DoobleJump">Dooble Jump</button>
+            </li>
+            <li>
+                <button type="button" onclick="goToBreakOut()" id="BreakOut">BreakOut</button>
+            </li>
+            <li>
+                <button type="button" onclick="goToDinosaur()" id="Dinosaur">Dinosaur</button>
+            </li>
+
+        </ul>
 
     </div>
 
@@ -55,6 +69,10 @@
         function goToBreakOut() {
             alert('벽돌깨기 게임으로 이동합니다.');
             window.location.href = '../break-out/index.html'; // 벽돌깨기 게임 페이지로 이동
+        }
+        function goToDinosaur() {
+            alert('공룡 게임으로 이동합니다.');
+            window.location.href = '../chromeGame/game.html'; // 공룡 게임 페이지로 이동
         }
 
 

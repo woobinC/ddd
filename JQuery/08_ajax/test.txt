@@ -1,0 +1,2 @@
+<h1>jQuery and Ajax is Fun!</h1>
+<p>과연 이게 되는 걸까?</p>

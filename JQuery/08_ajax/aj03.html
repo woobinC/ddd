@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <button id="btn">데이터</button>
+  <div id="txt">here</div>
+  <script>
+   $(function(){
+      $('#btn').click(function(){
+        let url = "test.json";
+        $.get({
+          url: url,
+          dataType: "json",
+          // contentType: "application/json"
+          success: function(data){
+            console.log(data);
+            print(data);
+          },
+          error: function(err){
+            console.log(err);
+          },
+          complete: function(){
+            console.log("ddd");
+          }
+        });
+      });
+
+      const print = function(data){
+        $('#txt').html(data);
+      }
+    });
+  </script>
+</body>
+</html>

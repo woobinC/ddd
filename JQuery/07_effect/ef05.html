@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 10px;
+      /* opacity: 1; */
+    }
+  </style>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <button>시작</button>
+
+  <div>jQuery</div>
+
+
+
+  <script>
+    $(function () {
+      $('button').click(function () {
+        $('div').animate({
+          width: '200px', left: '100px', fontSize: '3em'
+        }, 1500)
+          .animate({ fontSize: '3em', paddingLeft: '50px', paddingTop: '50' }, 1500)
+          .slideUp("slow")
+          .slideDown("slow");
+
+      });
+    });
+  </script>
+
+  <div id="click" style="padding: 10px; border: 1px solid red; width:100px; text-align: center; margin: 120px">Click
+    here
+  </div>
+  <img src="../../images/1.jpg" alt="" id="blue">
+
+  <script>
+    $(function () {
+      $('#click').click(function () {
+        $('#blue').animate({
+          //toggle: 설정값과 default값을 왔다리 갔다리
+          opacity: 'toggle',
+          //위치 설정값으로 대입연산자 사용가능
+          left: '+=50px', top: '+=50px',
+          height: 'toggle'
+        }, 500, function () {
+
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

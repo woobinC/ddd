@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <h1>ajax jquery 문법</h1>
+  <button>데이터</button>
+  <div>처음부터</div>
+
+  <script>
+    $(function(){
+      $('button').click(function(){
+        let url = "test.txt";
+        $.ajax({
+          type:"get",
+          url: url,
+          // dataType: "text/html"
+          // contentType: "application/json"
+          success: function(data){
+            console.log(data);
+            print(data);
+          },
+          error: function(err){
+            console.log(err);
+          },
+          complete: function(){
+            console.log("ddd");
+          }
+        });
+      });
+
+      const print = function(data){
+        $('div').html(data);
+      }
+    });
+  </script>
+</body>
+</html>
